@@ -7,24 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F23EFF902B2A5C9400C2FDD5 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EFF8F2B2A5C9400C2FDD5 /* Icons.swift */; };
+		F23EFF922B2A689B00C2FDD5 /* Korisnik.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EFF912B2A689B00C2FDD5 /* Korisnik.swift */; };
+		F26F10F32AE1B3CB0068B998 /* HandWritingDemoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F22AE1B3CB0068B998 /* HandWritingDemoRegular.ttf */; };
+		F26F10F62AE1C9420068B998 /* Mardi Gras.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F52AE1C9420068B998 /* Mardi Gras.otf */; };
+		F26F10F82AE1C94A0068B998 /* Sunlight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F72AE1C94A0068B998 /* Sunlight.otf */; };
+		F26F10FB2AE1CA2A0068B998 /* Big Movie.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F92AE1CA290068B998 /* Big Movie.otf */; };
+		F26F10FC2AE1CA2A0068B998 /* Hedgehog.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10FA2AE1CA290068B998 /* Hedgehog.otf */; };
+		F26F10FE2AE1D0AE0068B998 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F10FD2AE1D0AE0068B998 /* OptionsView.swift */; };
+		F2BA0ABB2B2896AB00631DB9 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA0ABA2B2896AB00631DB9 /* PostRequest.swift */; };
+		F2BD09A22AE3276F0047FB67 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A12AE3276F0047FB67 /* Study.swift */; };
+		F2BD09A42AE327820047FB67 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A32AE327820047FB67 /* Work.swift */; };
+		F2BD09A62AE327900047FB67 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A52AE327900047FB67 /* Workout.swift */; };
+		F2BD09A82AE32A340047FB67 /* Background2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A72AE32A340047FB67 /* Background2.swift */; };
 		F2D8FAE52AE04F03006997F3 /* BeBetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAE42AE04F03006997F3 /* BeBetterApp.swift */; };
 		F2D8FAE92AE04F05006997F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D8FAE82AE04F05006997F3 /* Assets.xcassets */; };
 		F2D8FAEC2AE04F05006997F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D8FAEB2AE04F05006997F3 /* Preview Assets.xcassets */; };
 		F2D8FAF42AE04F3C006997F3 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF22AE04F3C006997F3 /* Background.swift */; };
 		F2D8FAF52AE04F3C006997F3 /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF32AE04F3C006997F3 /* Foreground.swift */; };
-		F2D8FAF72AE05069006997F3 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF62AE05069006997F3 /* Icons.swift */; };
+		F2D8FAF72AE05069006997F3 /* Register_screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF62AE05069006997F3 /* Register_screen.swift */; };
 		F2D8FAF92AE05586006997F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF82AE05586006997F3 /* MainView.swift */; };
+		F2D8FB002AE0664B006997F3 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAFF2AE0664B006997F3 /* SettingsButton.swift */; };
+		F2D8FB022AE06A23006997F3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FB012AE06A23006997F3 /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F23BD0572B1BAB080029B4FC /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib; sourceTree = "<group>"; };
+		F23BD0592B1BAB940029B4FC /* libecpg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libecpg.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libecpg.a; sourceTree = "<group>"; };
+		F23BD05A2B1BAB940029B4FC /* libpgtypes.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgtypes.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpgtypes.a; sourceTree = "<group>"; };
+		F23BD05B2B1BAB940029B4FC /* libpq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpq.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpq.a; sourceTree = "<group>"; };
+		F23BD05C2B1BAB940029B4FC /* libecpg_compat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libecpg_compat.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libecpg_compat.a; sourceTree = "<group>"; };
+		F23BD05D2B1BAB940029B4FC /* libpgcommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgcommon.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpgcommon.a; sourceTree = "<group>"; };
+		F23BD05E2B1BAB940029B4FC /* libpgport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgport.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpgport.a; sourceTree = "<group>"; };
+		F23BD05F2B1BAB940029B4FC /* libpgport_shlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgport_shlib.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpgport_shlib.a; sourceTree = "<group>"; };
+		F23BD0602B1BAB940029B4FC /* libpgcommon_shlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgcommon_shlib.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpgcommon_shlib.a; sourceTree = "<group>"; };
+		F23BD06D2B1BF33E0029B4FC /* psql */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = psql; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/bin/psql; sourceTree = "<group>"; };
+		F23BD0702B1BF3580029B4FC /* pg_rewind */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_rewind; sourceTree = "<group>"; };
+		F23BD0712B1BF3580029B4FC /* ecpg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ecpg; sourceTree = "<group>"; };
+		F23BD0722B1BF3580029B4FC /* pg_basebackup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_basebackup; sourceTree = "<group>"; };
+		F23BD0732B1BF3580029B4FC /* pg_restore */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_restore; sourceTree = "<group>"; };
+		F23BD0742B1BF3580029B4FC /* pg_isready */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_isready; sourceTree = "<group>"; };
+		F23BD0752B1BF3580029B4FC /* createuser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = createuser; sourceTree = "<group>"; };
+		F23BD0762B1BF3580029B4FC /* pg_config */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_config; sourceTree = "<group>"; };
+		F23BD0772B1BF3580029B4FC /* pg_dumpall */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_dumpall; sourceTree = "<group>"; };
+		F23BD0782B1BF3580029B4FC /* pg_test_fsync */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_test_fsync; sourceTree = "<group>"; };
+		F23BD0792B1BF3580029B4FC /* initdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = initdb; sourceTree = "<group>"; };
+		F23BD07A2B1BF3580029B4FC /* pg_waldump */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_waldump; sourceTree = "<group>"; };
+		F23BD07B2B1BF3580029B4FC /* createdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = createdb; sourceTree = "<group>"; };
+		F23BD07C2B1BF3580029B4FC /* reindexdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = reindexdb; sourceTree = "<group>"; };
+		F23BD07D2B1BF3580029B4FC /* pg_verifybackup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_verifybackup; sourceTree = "<group>"; };
+		F23BD07E2B1BF3580029B4FC /* pg_receivewal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_receivewal; sourceTree = "<group>"; };
+		F23BD07F2B1BF3580029B4FC /* pg_amcheck */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_amcheck; sourceTree = "<group>"; };
+		F23BD0802B1BF3580029B4FC /* dropdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dropdb; sourceTree = "<group>"; };
+		F23BD0812B1BF3580029B4FC /* psql */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = psql; sourceTree = "<group>"; };
+		F23BD0822B1BF3580029B4FC /* pg_checksums */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_checksums; sourceTree = "<group>"; };
+		F23BD0832B1BF3580029B4FC /* clusterdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = clusterdb; sourceTree = "<group>"; };
+		F23BD0842B1BF3580029B4FC /* pg_archivecleanup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_archivecleanup; sourceTree = "<group>"; };
+		F23BD0852B1BF3580029B4FC /* dropuser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dropuser; sourceTree = "<group>"; };
+		F23BD0862B1BF3580029B4FC /* pg_controldata */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_controldata; sourceTree = "<group>"; };
+		F23BD0872B1BF3580029B4FC /* pg_recvlogical */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_recvlogical; sourceTree = "<group>"; };
+		F23BD0882B1BF3580029B4FC /* pg_test_timing */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_test_timing; sourceTree = "<group>"; };
+		F23BD0892B1BF3580029B4FC /* pg_upgrade */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_upgrade; sourceTree = "<group>"; };
+		F23BD08A2B1BF3580029B4FC /* pg_ctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_ctl; sourceTree = "<group>"; };
+		F23BD08B2B1BF3580029B4FC /* vacuumdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = vacuumdb; sourceTree = "<group>"; };
+		F23BD08C2B1BF3580029B4FC /* pgbench */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pgbench; sourceTree = "<group>"; };
+		F23BD08D2B1BF3580029B4FC /* pg_resetwal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_resetwal; sourceTree = "<group>"; };
+		F23BD08E2B1BF3580029B4FC /* pg_dump */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_dump; sourceTree = "<group>"; };
+		F23BD0902B1BF3610029B4FC /* pg_rewind */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_rewind; sourceTree = "<group>"; };
+		F23BD0912B1BF3610029B4FC /* ecpg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ecpg; sourceTree = "<group>"; };
+		F23BD0922B1BF3610029B4FC /* pg_basebackup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_basebackup; sourceTree = "<group>"; };
+		F23BD0932B1BF3610029B4FC /* pg_restore */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_restore; sourceTree = "<group>"; };
+		F23BD0942B1BF3610029B4FC /* pg_isready */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_isready; sourceTree = "<group>"; };
+		F23BD0952B1BF3610029B4FC /* createuser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = createuser; sourceTree = "<group>"; };
+		F23BD0962B1BF3610029B4FC /* pg_config */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_config; sourceTree = "<group>"; };
+		F23BD0972B1BF3610029B4FC /* pg_dumpall */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_dumpall; sourceTree = "<group>"; };
+		F23BD0982B1BF3610029B4FC /* pg_test_fsync */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_test_fsync; sourceTree = "<group>"; };
+		F23BD0992B1BF3610029B4FC /* initdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = initdb; sourceTree = "<group>"; };
+		F23BD09A2B1BF3610029B4FC /* pg_waldump */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_waldump; sourceTree = "<group>"; };
+		F23BD09B2B1BF3610029B4FC /* createdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = createdb; sourceTree = "<group>"; };
+		F23BD09C2B1BF3610029B4FC /* reindexdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = reindexdb; sourceTree = "<group>"; };
+		F23BD09D2B1BF3610029B4FC /* pg_verifybackup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_verifybackup; sourceTree = "<group>"; };
+		F23BD09E2B1BF3610029B4FC /* pg_receivewal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_receivewal; sourceTree = "<group>"; };
+		F23BD09F2B1BF3610029B4FC /* pg_amcheck */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_amcheck; sourceTree = "<group>"; };
+		F23BD0A02B1BF3610029B4FC /* dropdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dropdb; sourceTree = "<group>"; };
+		F23BD0A12B1BF3610029B4FC /* psql */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = psql; sourceTree = "<group>"; };
+		F23BD0A22B1BF3610029B4FC /* pg_checksums */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_checksums; sourceTree = "<group>"; };
+		F23BD0A32B1BF3610029B4FC /* clusterdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = clusterdb; sourceTree = "<group>"; };
+		F23BD0A42B1BF3610029B4FC /* pg_archivecleanup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_archivecleanup; sourceTree = "<group>"; };
+		F23BD0A52B1BF3610029B4FC /* dropuser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dropuser; sourceTree = "<group>"; };
+		F23BD0A62B1BF3610029B4FC /* pg_controldata */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_controldata; sourceTree = "<group>"; };
+		F23BD0A72B1BF3610029B4FC /* pg_recvlogical */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_recvlogical; sourceTree = "<group>"; };
+		F23BD0A82B1BF3610029B4FC /* pg_test_timing */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_test_timing; sourceTree = "<group>"; };
+		F23BD0A92B1BF3610029B4FC /* pg_upgrade */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_upgrade; sourceTree = "<group>"; };
+		F23BD0AA2B1BF3610029B4FC /* pg_ctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_ctl; sourceTree = "<group>"; };
+		F23BD0AB2B1BF3610029B4FC /* vacuumdb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = vacuumdb; sourceTree = "<group>"; };
+		F23BD0AC2B1BF3610029B4FC /* pgbench */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pgbench; sourceTree = "<group>"; };
+		F23BD0AD2B1BF3610029B4FC /* pg_resetwal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_resetwal; sourceTree = "<group>"; };
+		F23BD0AE2B1BF3610029B4FC /* pg_dump */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pg_dump; sourceTree = "<group>"; };
+		F23BD0CE2B1BF3860029B4FC /* libpq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpq.dylib; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpq.dylib; sourceTree = "<group>"; };
+		F23BD0D02B1BF39B0029B4FC /* libpq.pc */ = {isa = PBXFileReference; lastKnownFileType = text; name = libpq.pc; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/pkgconfig/libpq.pc; sourceTree = "<group>"; };
+		F23EFF8F2B2A5C9400C2FDD5 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		F23EFF912B2A689B00C2FDD5 /* Korisnik.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Korisnik.swift; path = "../../../../../Library/Mobile Documents/.Trash/Korisnik.swift"; sourceTree = "<group>"; };
+		F26F10F22AE1B3CB0068B998 /* HandWritingDemoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HandWritingDemoRegular.ttf; sourceTree = "<group>"; };
+		F26F10F42AE1BAB90068B998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F26F10F52AE1C9420068B998 /* Mardi Gras.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mardi Gras.otf"; sourceTree = "<group>"; };
+		F26F10F72AE1C94A0068B998 /* Sunlight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sunlight.otf; sourceTree = "<group>"; };
+		F26F10F92AE1CA290068B998 /* Big Movie.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Big Movie.otf"; sourceTree = "<group>"; };
+		F26F10FA2AE1CA290068B998 /* Hedgehog.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hedgehog.otf; sourceTree = "<group>"; };
+		F26F10FD2AE1D0AE0068B998 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		F2BA0ABA2B2896AB00631DB9 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
+		F2BD09A12AE3276F0047FB67 /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
+		F2BD09A32AE327820047FB67 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		F2BD09A52AE327900047FB67 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		F2BD09A72AE32A340047FB67 /* Background2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background2.swift; sourceTree = "<group>"; };
 		F2D8FAE12AE04F03006997F3 /* BeBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D8FAE42AE04F03006997F3 /* BeBetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBetterApp.swift; sourceTree = "<group>"; };
 		F2D8FAE82AE04F05006997F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D8FAEB2AE04F05006997F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2D8FAF22AE04F3C006997F3 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		F2D8FAF32AE04F3C006997F3 /* Foreground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
-		F2D8FAF62AE05069006997F3 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		F2D8FAF62AE05069006997F3 /* Register_screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register_screen.swift; sourceTree = "<group>"; };
 		F2D8FAF82AE05586006997F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F2D8FAFF2AE0664B006997F3 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		F2D8FB012AE06A23006997F3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,11 +143,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F23BD0562B1BAB080029B4FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F23BD0D02B1BF39B0029B4FC /* libpq.pc */,
+				F23BD0CE2B1BF3860029B4FC /* libpq.dylib */,
+				F23BD06F2B1BF3580029B4FC /* bin */,
+				F23BD08F2B1BF3610029B4FC /* bin */,
+				F23BD06D2B1BF33E0029B4FC /* psql */,
+				F23BD05C2B1BAB940029B4FC /* libecpg_compat.a */,
+				F23BD0592B1BAB940029B4FC /* libecpg.a */,
+				F23BD0602B1BAB940029B4FC /* libpgcommon_shlib.a */,
+				F23BD05D2B1BAB940029B4FC /* libpgcommon.a */,
+				F23BD05F2B1BAB940029B4FC /* libpgport_shlib.a */,
+				F23BD05E2B1BAB940029B4FC /* libpgport.a */,
+				F23BD05A2B1BAB940029B4FC /* libpgtypes.a */,
+				F23BD05B2B1BAB940029B4FC /* libpq.a */,
+				F23BD0572B1BAB080029B4FC /* lib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F23BD06F2B1BF3580029B4FC /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				F23BD0702B1BF3580029B4FC /* pg_rewind */,
+				F23BD0712B1BF3580029B4FC /* ecpg */,
+				F23BD0722B1BF3580029B4FC /* pg_basebackup */,
+				F23BD0732B1BF3580029B4FC /* pg_restore */,
+				F23BD0742B1BF3580029B4FC /* pg_isready */,
+				F23BD0752B1BF3580029B4FC /* createuser */,
+				F23BD0762B1BF3580029B4FC /* pg_config */,
+				F23BD0772B1BF3580029B4FC /* pg_dumpall */,
+				F23BD0782B1BF3580029B4FC /* pg_test_fsync */,
+				F23BD0792B1BF3580029B4FC /* initdb */,
+				F23BD07A2B1BF3580029B4FC /* pg_waldump */,
+				F23BD07B2B1BF3580029B4FC /* createdb */,
+				F23BD07C2B1BF3580029B4FC /* reindexdb */,
+				F23BD07D2B1BF3580029B4FC /* pg_verifybackup */,
+				F23BD07E2B1BF3580029B4FC /* pg_receivewal */,
+				F23BD07F2B1BF3580029B4FC /* pg_amcheck */,
+				F23BD0802B1BF3580029B4FC /* dropdb */,
+				F23BD0812B1BF3580029B4FC /* psql */,
+				F23BD0822B1BF3580029B4FC /* pg_checksums */,
+				F23BD0832B1BF3580029B4FC /* clusterdb */,
+				F23BD0842B1BF3580029B4FC /* pg_archivecleanup */,
+				F23BD0852B1BF3580029B4FC /* dropuser */,
+				F23BD0862B1BF3580029B4FC /* pg_controldata */,
+				F23BD0872B1BF3580029B4FC /* pg_recvlogical */,
+				F23BD0882B1BF3580029B4FC /* pg_test_timing */,
+				F23BD0892B1BF3580029B4FC /* pg_upgrade */,
+				F23BD08A2B1BF3580029B4FC /* pg_ctl */,
+				F23BD08B2B1BF3580029B4FC /* vacuumdb */,
+				F23BD08C2B1BF3580029B4FC /* pgbench */,
+				F23BD08D2B1BF3580029B4FC /* pg_resetwal */,
+				F23BD08E2B1BF3580029B4FC /* pg_dump */,
+			);
+			name = bin;
+			path = ../../../../../opt/homebrew/Cellar/libpq/16.1/bin;
+			sourceTree = "<group>";
+		};
+		F23BD08F2B1BF3610029B4FC /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				F23BD0902B1BF3610029B4FC /* pg_rewind */,
+				F23BD0912B1BF3610029B4FC /* ecpg */,
+				F23BD0922B1BF3610029B4FC /* pg_basebackup */,
+				F23BD0932B1BF3610029B4FC /* pg_restore */,
+				F23BD0942B1BF3610029B4FC /* pg_isready */,
+				F23BD0952B1BF3610029B4FC /* createuser */,
+				F23BD0962B1BF3610029B4FC /* pg_config */,
+				F23BD0972B1BF3610029B4FC /* pg_dumpall */,
+				F23BD0982B1BF3610029B4FC /* pg_test_fsync */,
+				F23BD0992B1BF3610029B4FC /* initdb */,
+				F23BD09A2B1BF3610029B4FC /* pg_waldump */,
+				F23BD09B2B1BF3610029B4FC /* createdb */,
+				F23BD09C2B1BF3610029B4FC /* reindexdb */,
+				F23BD09D2B1BF3610029B4FC /* pg_verifybackup */,
+				F23BD09E2B1BF3610029B4FC /* pg_receivewal */,
+				F23BD09F2B1BF3610029B4FC /* pg_amcheck */,
+				F23BD0A02B1BF3610029B4FC /* dropdb */,
+				F23BD0A12B1BF3610029B4FC /* psql */,
+				F23BD0A22B1BF3610029B4FC /* pg_checksums */,
+				F23BD0A32B1BF3610029B4FC /* clusterdb */,
+				F23BD0A42B1BF3610029B4FC /* pg_archivecleanup */,
+				F23BD0A52B1BF3610029B4FC /* dropuser */,
+				F23BD0A62B1BF3610029B4FC /* pg_controldata */,
+				F23BD0A72B1BF3610029B4FC /* pg_recvlogical */,
+				F23BD0A82B1BF3610029B4FC /* pg_test_timing */,
+				F23BD0A92B1BF3610029B4FC /* pg_upgrade */,
+				F23BD0AA2B1BF3610029B4FC /* pg_ctl */,
+				F23BD0AB2B1BF3610029B4FC /* vacuumdb */,
+				F23BD0AC2B1BF3610029B4FC /* pgbench */,
+				F23BD0AD2B1BF3610029B4FC /* pg_resetwal */,
+				F23BD0AE2B1BF3610029B4FC /* pg_dump */,
+			);
+			name = bin;
+			path = ../../../../../opt/homebrew/Cellar/libpq/16.1/bin;
+			sourceTree = "<group>";
+		};
+		F2BA0AB92B28968700631DB9 /* URL-requests */ = {
+			isa = PBXGroup;
+			children = (
+				F2BA0ABA2B2896AB00631DB9 /* PostRequest.swift */,
+			);
+			path = "URL-requests";
+			sourceTree = "<group>";
+		};
+		F2BA0ABC2B28979A00631DB9 /* DatabaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				F23EFF912B2A689B00C2FDD5 /* Korisnik.swift */,
+			);
+			path = DatabaseModels;
+			sourceTree = "<group>";
+		};
+		F2BD09A02AE327600047FB67 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F2BD09A12AE3276F0047FB67 /* Study.swift */,
+				F2BD09A32AE327820047FB67 /* Work.swift */,
+				F2BD09A52AE327900047FB67 /* Workout.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		F2D8FAD82AE04F03006997F3 = {
 			isa = PBXGroup;
 			children = (
 				F2D8FAE32AE04F03006997F3 /* BeBetter */,
 				F2D8FAE22AE04F03006997F3 /* Products */,
+				F23BD0562B1BAB080029B4FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +288,21 @@
 		F2D8FAE32AE04F03006997F3 /* BeBetter */ = {
 			isa = PBXGroup;
 			children = (
+				F2BA0ABC2B28979A00631DB9 /* DatabaseModels */,
+				F2BA0AB92B28968700631DB9 /* URL-requests */,
+				F26F10F42AE1BAB90068B998 /* Info.plist */,
+				F2D8FAFA2AE05B7E006997F3 /* Fonts */,
 				F2D8FAE42AE04F03006997F3 /* BeBetterApp.swift */,
+				F23EFF8F2B2A5C9400C2FDD5 /* Icons.swift */,
 				F2D8FAF82AE05586006997F3 /* MainView.swift */,
+				F2D8FB012AE06A23006997F3 /* Login.swift */,
+				F2D8FAF62AE05069006997F3 /* Register_screen.swift */,
 				F2D8FAF22AE04F3C006997F3 /* Background.swift */,
+				F2BD09A72AE32A340047FB67 /* Background2.swift */,
 				F2D8FAF32AE04F3C006997F3 /* Foreground.swift */,
-				F2D8FAF62AE05069006997F3 /* Icons.swift */,
+				F2BD09A02AE327600047FB67 /* Categories */,
+				F2D8FAFF2AE0664B006997F3 /* SettingsButton.swift */,
+				F26F10FD2AE1D0AE0068B998 /* OptionsView.swift */,
 				F2D8FAE82AE04F05006997F3 /* Assets.xcassets */,
 				F2D8FAEA2AE04F05006997F3 /* Preview Content */,
 			);
@@ -74,6 +315,18 @@
 				F2D8FAEB2AE04F05006997F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F2D8FAFA2AE05B7E006997F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F26F10F92AE1CA290068B998 /* Big Movie.otf */,
+				F26F10FA2AE1CA290068B998 /* Hedgehog.otf */,
+				F26F10F72AE1C94A0068B998 /* Sunlight.otf */,
+				F26F10F52AE1C9420068B998 /* Mardi Gras.otf */,
+				F26F10F22AE1B3CB0068B998 /* HandWritingDemoRegular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +361,7 @@
 				TargetAttributes = {
 					F2D8FAE02AE04F03006997F3 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -134,8 +388,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26F10FC2AE1CA2A0068B998 /* Hedgehog.otf in Resources */,
+				F26F10FB2AE1CA2A0068B998 /* Big Movie.otf in Resources */,
+				F26F10F82AE1C94A0068B998 /* Sunlight.otf in Resources */,
+				F26F10F32AE1B3CB0068B998 /* HandWritingDemoRegular.ttf in Resources */,
 				F2D8FAEC2AE04F05006997F3 /* Preview Assets.xcassets in Resources */,
 				F2D8FAE92AE04F05006997F3 /* Assets.xcassets in Resources */,
+				F26F10F62AE1C9420068B998 /* Mardi Gras.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +405,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2BD09A22AE3276F0047FB67 /* Study.swift in Sources */,
+				F2BA0ABB2B2896AB00631DB9 /* PostRequest.swift in Sources */,
+				F23EFF922B2A689B00C2FDD5 /* Korisnik.swift in Sources */,
 				F2D8FAE52AE04F03006997F3 /* BeBetterApp.swift in Sources */,
+				F2BD09A42AE327820047FB67 /* Work.swift in Sources */,
+				F2D8FB022AE06A23006997F3 /* Login.swift in Sources */,
 				F2D8FAF52AE04F3C006997F3 /* Foreground.swift in Sources */,
-				F2D8FAF72AE05069006997F3 /* Icons.swift in Sources */,
+				F26F10FE2AE1D0AE0068B998 /* OptionsView.swift in Sources */,
+				F23EFF902B2A5C9400C2FDD5 /* Icons.swift in Sources */,
+				F2BD09A82AE32A340047FB67 /* Background2.swift in Sources */,
+				F2BD09A62AE327900047FB67 /* Workout.swift in Sources */,
+				F2D8FAF72AE05069006997F3 /* Register_screen.swift in Sources */,
+				F2D8FB002AE0664B006997F3 /* SettingsButton.swift in Sources */,
 				F2D8FAF92AE05586006997F3 /* MainView.swift in Sources */,
 				F2D8FAF42AE04F3C006997F3 /* Background.swift in Sources */,
 			);
@@ -210,6 +479,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LIBRARY_SEARCH_PATHS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -267,6 +537,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LIBRARY_SEARCH_PATHS = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -281,25 +552,31 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BeBetter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "BeBetter/Preview\\ Content";
 				DEVELOPMENT_TEAM = JYSCR67HX3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = BeBetter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = abotica.BeBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,24 +587,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BeBetter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "BeBetter/Preview\\ Content";
 				DEVELOPMENT_TEAM = JYSCR67HX3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = BeBetter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = abotica.BeBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

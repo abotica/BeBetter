@@ -8,20 +8,61 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    let hour = Calendar.current.component(.hour, from: Date())
+    
     var body: some View {
+    
        
         ZStack{
-            Background()
-            
-            Text("BeBetter").font(.custom("", size: 40))
-            
-            
+            Background2()
+                .overlay(Text("BeBetter").font(.custom("Big Movie", size: 55)).padding(.leading, 2).overlay(Image("Bee").resizable().frame(width: 25, height: 25).rotationEffect(.degrees(20)), alignment: .topLeading), alignment: .topLeading)
+                .overlay(SettingsButton().padding(.top), alignment: .topTrailing)
             
             
             
-            
+            VStack{
+                Divider()
+                    
+                    .foregroundStyle(Color("AccentColorInvert"))
+                    .padding(.top, 50)
+                    
+                if(hour > 6 && hour < 12){
+                    
+                    Text("Good morning Andrija! What will you do?")
+                        .foregroundStyle(Color.black)
+                        .font(.custom("Big Movie", size: 35))
+                        
+                    
+                }
+                else if(hour >= 12 && hour < 17){
+                    
+                    Text("Good evening Andrija! What will you do?")
+                        .font(.custom("Big Movie", size: 35))
+                    
+                }
+                else{
+                    
+                    Text("Working late Andrija! What will you do?")
+                        .font(.custom("Big Movie", size: 35))
+                    
+                }
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                    
+                    HStack(spacing: 20) {
+                        Icons()
+                    }
+                    .frame(height: 225)
+                    
+                    
+                }
+                Spacer()
+                
+            }
+
         }
-        
+    
         
     }
 }

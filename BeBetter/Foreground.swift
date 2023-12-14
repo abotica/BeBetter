@@ -12,8 +12,8 @@ struct Foreground: View {
     
     var body: some View {
                 ZStack{
-            
-            LinearGradient(colors: [Color(#colorLiteral(red: 0.9993855357, green: 0.8329706788, blue: 0.4883880019, alpha: 1)), Color(#colorLiteral(red: 0.9725125432, green: 0.6108481288, blue: 0.347471714, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    
+            LinearGradient(colors: [Color(#colorLiteral(red: 1, green: 0.8245059848, blue: 0, alpha: 1)), Color(#colorLiteral(red: 1, green: 0.329893887, blue: 0.3010276556, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
             
             VStack {
@@ -27,15 +27,16 @@ struct Foreground: View {
                             Text("Better")
                                 .shadow(color: Color(.white), radius: 3, x: 3, y: 3)
                                 .rotationEffect(.degrees(-20))
-                                .font(.custom("Snell Roundhand Black", size: 40))
+                                .font(.custom("Big Movie", size: 50))
                                 .frame(width: 180, height: 160, alignment: .bottomTrailing)
-                            
+                                .padding(.top)
+                                .foregroundStyle(.black)
                         )
                    
                         
                 Spacer()
-                Text("By Beees").font(.custom("Snell Roundhand Bold", size: 20))
-                
+                Text("By Beees").font(.custom("Big Movie", size: 40))
+                    .foregroundStyle(.black)
             }
         
         }

@@ -1,5 +1,13 @@
 //
 //  Icons.swift
+//  BeBetter
+//
+//  Created by Andrija Botica on 13.12.2023..
+//
+
+import Foundation
+//
+//  Icons.swift
 //  eKafic
 //
 //  Created by Andrija Botica on 13.10.2023..
@@ -11,26 +19,80 @@ struct Icons: View {
     
     var body: some View {
         
-        //Hedgehog
-        ForEach(0..<10){index in
-            Circle()
-                .fill(Color(#colorLiteral(red: 0.9294186234, green: 0.8603298068, blue: 0.7263699174, alpha: 1)))
-                .frame(width: 175, height: 175)
-                .overlay(
-                    Text("🦔")
-                        .shadow(radius: 0.3)
-                        .font(.largeTitle)
-                )
-                .shadow(color: Color(#colorLiteral(red: 0.2117646933, green: 0.2117646933, blue: 0.2117646933, alpha: 0.6)), radius: 3.5, x: 5, y: 5)
-        }
+        Button(action: {
+            
+            
+            
+        }, label: {
+           
+            
+            Image("Study")
+                .resizable()
+                .frame(width: 250, height: 200)
+                .background(LinearGradient(colors: [Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)), Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .shadow(color: Color("AccentColorInvert"), radius: 0, x: 5, y: 8)
+                .overlay(Text("Study").font(.custom("Big Movie", size: 40)), alignment: .top)
+                .foregroundStyle(Color("AccentColorInvert"))
+                
+            
+            
+            
+            })
         
+        Button(action: {
+            
+            
+            
+        }, label: {
+           
+            
+            Image("Work")
+                .resizable()
+                .frame(width: 250, height: 200)
+                .background(LinearGradient(colors: [Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)), Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .shadow(color: Color("AccentColorInvert"), radius: 0, x: 5, y: 8)
+                .overlay(Text("Work").font(.custom("Big Movie", size: 40)), alignment: .top)
+                .foregroundStyle(Color("AccentColorInvert"))
+            
+            
+            
+            })
+        
+        Button(action: {
+            
+            
+            
+        }, label: {
+           
+            
+            Image("Workout")
+                .resizable()
+                .frame(width: 250, height: 200)
+                .background(LinearGradient(colors: [Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)), Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .shadow(color: Color("AccentColorInvert"), radius: 0, x: 5, y: 8)
+                .overlay(Text("Workout").font(.custom("Big Movie", size: 40)), alignment: .top)
+                .foregroundStyle(Color("AccentColorInvert"))
+                
+                
+            
+            
+            
+            })
+        
+        
+        
+        }
+           
     }
-    
-    
-}
+
 
 
 
 #Preview {
     Icons()
 }
+
+

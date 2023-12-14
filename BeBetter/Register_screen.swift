@@ -22,6 +22,46 @@ struct Register_screen: View {
         ZStack{
             LinearGradient(colors: [Color(#colorLiteral(red: 0.9139844775, green: 0.767064631, blue: 0.4150085449, alpha: 1)), Color(#colorLiteral(red: 0.9025250077, green: 0.4324684143, blue: 0.3178541958, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
+//                .safeAreaInset(edge: .top, alignment: .leading){
+//                    
+//                    Button(action: {
+//                        
+//                        //vrati se nazad
+//                        
+//                    }, label: {
+//                        
+//                        Circle()
+//                            .opacity(0)
+//                            .overlay(content: {
+//                                Image(systemName: "arrow.left")
+//                                    .shadow( radius: 1, x: 1, y: 0.5)
+//                                    .foregroundStyle(.black)
+//                                    .fontWeight(.black)
+//                                    .clipShape(Circle())
+//                            })
+//                        .frame(width: Screen_Width*0.1)
+//                        .padding(.top, Screen_Height*0.04)
+//            
+//                        
+//                        
+//                    })
+//                    
+//                }
+                .overlay(){
+                    Button(action: {
+                    
+                        }, label: {
+                    
+                            Image(systemName: "arrow.left")
+                                    .shadow( radius: 1, x: 1, y: 0.5)
+                                    .foregroundStyle(.black)
+                                    .fontWeight(.black)
+                                    .clipShape(Circle())
+                                    .position(x: Screen_Width*0.1, y: Screen_Height*0.08)
+                                        })
+                    
+                                    
+                }
                 .onAppear(){
                     Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false){_ in
                         withAnimation(.bouncy(extraBounce: 0.3)){
@@ -29,6 +69,7 @@ struct Register_screen: View {
                         }
                     }
                 }
+            
             
             VStack(spacing: Screen_Height*0.026){
                 Spacer(minLength: Screen_Height*0.05)

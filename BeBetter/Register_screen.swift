@@ -9,12 +9,10 @@ import SwiftUI
 
 struct Register_screen: View {
     @ObservedObject var KorisnikModel = KorisnikViewModel()
-//    @State var ime = ""
-//    @State var prezime = ""
-//    @State var username = ""
-//    @State var email = ""
-//    @State var password = ""
-//    @State var confirmed_password = ""
+    @Binding var goBack: Bool
+    @Binding var removeLoginView: Bool
+    @Binding var isRegistered: Bool
+    @Binding var isShownOnce: Bool
     @State var isActivated: Bool = false
     @State var Screen_Width = UIScreen.main.bounds.width
     @State var Screen_Height = UIScreen.main.bounds.height
@@ -49,6 +47,11 @@ struct Register_screen: View {
 //                }
                 .overlay(){
                     Button(action: {
+                        
+                        goBack = true
+                        isRegistered = false
+                        removeLoginView = false
+                        isShownOnce = false
                     
                         }, label: {
                     
@@ -244,5 +247,5 @@ struct Register_screen: View {
 }
 
 #Preview {
-    Register_screen()
+    Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true))
 }

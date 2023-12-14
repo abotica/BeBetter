@@ -13,51 +13,26 @@ struct BeBetterApp: App {
     @State var isLoggedIn: Bool = false
     @State var isRegistered: Bool = false //ako klikne register button
     @State var removeLoginView: Bool = false
+    @State var goBack: Bool = false
+    @State var isShownOnce: Bool = true
     var body: some Scene {
         
         WindowGroup {
         //zatvorit view-ove????
             if(!removeLoginView){
-                Login(isLoggedIn: $isLoggedIn, isRegistered: $isRegistered, removeLoginView: $removeLoginView)
+                Login(isLoggedIn: $isLoggedIn, isRegistered: $isRegistered, removeLoginView: $removeLoginView, isShownOnce: $isShownOnce)
             }
             
             if(isLoggedIn){
                 MainView()
             }
             else if(isRegistered){
-                Register_screen()
+                Register_screen(goBack: $goBack, removeLoginView: $removeLoginView, isRegistered: $isRegistered, isShownOnce: $isShownOnce)
             }
-            
-            
-//            if isLoggedIn{
-//                
-//                MainView()
-//                
-//                
-//               
-//                   
-//                
-//                    
-//            }
-//            else{
-//               
-//                Login(isLoggedIn: $isLoggedIn, isRegistered: $isRegistered)
-//              
-//                
-//              
-//                
-//            }
-//            
-//            if isRegistered{
-//                
-//                Register_screen()
-//                
+//            if(goBack){
+//                Login(isLoggedIn: $isLoggedIn, isRegistered: $isRegistered, removeLoginView: $removeLoginView)
 //            }
             
-            
-            
-           
-
         }
     }
 }

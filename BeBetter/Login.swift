@@ -25,12 +25,13 @@ struct Login: View {
     @Binding var isLoggedIn: Bool
     @Binding var isRegistered: Bool
     @Binding var removeLoginView: Bool
+    @Binding var isShownOnce: Bool
     @State var isActivated: Bool = false
     @State var showForeground: Bool = true
     
     var body: some View {
      
-        if(showForeground == true){
+        if(showForeground && isShownOnce){
             
             Foreground().onAppear(){
                 
@@ -183,5 +184,5 @@ struct Login: View {
 
 
 #Preview {
-    Login(isLoggedIn: .constant(false), isRegistered: .constant(false), removeLoginView: .constant(false))
+    Login(isLoggedIn: .constant(false), isRegistered: .constant(false), removeLoginView: .constant(false), isShownOnce: .constant(true))
 }

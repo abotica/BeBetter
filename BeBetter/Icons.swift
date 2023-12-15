@@ -17,6 +17,18 @@ import SwiftUI
 
 struct Icons: View {
     
+    @State var background = LinearGradient(colors: [Color(#colorLiteral(red: 0.9139844775, green: 0.767064631, blue: 0.4150085449, alpha: 1)), Color(#colorLiteral(red: 0.9025250077, green: 0.4324684143, blue: 0.3178541958, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
+    
+    @State var width:CGFloat = 250
+    @State var height:CGFloat = 200
+    @State var cornerRadius: CGFloat = 25
+    @State var fontSize: CGFloat = 40
+    @State var fontName: String = "Katibeh-Regular"
+    @State var appColor: String = "AccentColorInvert"
+    @State var shadowX: CGFloat = 3
+    @State var shadowY: CGFloat = 6
+    @State var shadowRadius: CGFloat = 0
+    
     var body: some View {
         
         Button(action: {
@@ -28,12 +40,12 @@ struct Icons: View {
             
             Image("Study")
                 .resizable()
-                .frame(width: 250, height: 200)
-                .background(LinearGradient(colors: [Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)), Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .clipShape(RoundedRectangle(cornerRadius: 25))
-                .shadow(color: Color("AccentColorInvert"), radius: 0, x: 5, y: 8)
-                .overlay(Text("Study").font(.custom("Big Movie", size: 40)), alignment: .top)
-                .foregroundStyle(Color("AccentColorInvert"))
+                .frame(width: width, height: height)
+                .background(background)
+                .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                .shadow(color: Color(appColor), radius: shadowRadius, x: shadowX, y: shadowY)
+                .overlay(Text("Study").font(.custom(fontName, size: fontSize)).padding(), alignment: .top)
+                .foregroundStyle(Color(appColor))
                 
             
             
@@ -49,12 +61,12 @@ struct Icons: View {
             
             Image("Work")
                 .resizable()
-                .frame(width: 250, height: 200)
-                .background(LinearGradient(colors: [Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)), Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .clipShape(RoundedRectangle(cornerRadius: 25))
-                .shadow(color: Color("AccentColorInvert"), radius: 0, x: 5, y: 8)
-                .overlay(Text("Work").font(.custom("Big Movie", size: 40)), alignment: .top)
-                .foregroundStyle(Color("AccentColorInvert"))
+                .frame(width: width, height: height)
+                .background(background)
+                .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                .shadow(color: Color(appColor), radius: shadowRadius, x: shadowX, y: shadowY)
+                .overlay(Text("Work").font(.custom(fontName, size: fontSize)).padding(), alignment: .top)
+                .foregroundStyle(Color(appColor))
             
             
             
@@ -69,12 +81,12 @@ struct Icons: View {
             
             Image("Workout")
                 .resizable()
-                .frame(width: 250, height: 200)
-                .background(LinearGradient(colors: [Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)), Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .clipShape(RoundedRectangle(cornerRadius: 25))
-                .shadow(color: Color("AccentColorInvert"), radius: 0, x: 5, y: 8)
-                .overlay(Text("Workout").font(.custom("Big Movie", size: 40)), alignment: .top)
-                .foregroundStyle(Color("AccentColorInvert"))
+                .frame(width: width, height: height)
+                .background(background)
+                .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                .shadow(color: Color(appColor), radius: shadowRadius, x: shadowX, y: shadowY)
+                .overlay(Text("Workout").font(.custom(fontName, size: fontSize)).padding(), alignment: .top)
+                .foregroundStyle(Color(appColor))
                 
                 
             

@@ -14,21 +14,18 @@ struct NavigationBar: View {
 
             HStack(){
 
-                        Text("beBetter")
-                        .overlay(content: {
-                            Image("Bee")
-                                .resizable()
-                                .frame(width: Screen_Width*0.1, height: Screen_Height*0.06)
-                                .rotationEffect(.degrees(-25))
-                                .shadow(color: .black, radius: 4, x:2, y: 6)
-                                .position(x: Screen_Width*(-0.09), y: Screen_Height*(0.018))
-                                .padding(.leading, 10)
-
-                        })
-                        .padding(.leading, 40)
+                Text("beBetter").font(.custom("Katibeh-Regular", size: 40)).padding(.leading, 20).overlay(Image("Bee")
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    .rotationEffect(.degrees(25)).position(x: 14, y: 4)
+                    .shadow(color: .accentColorInvert, radius: 1)
+                )
                         .font(.custom("Katibeh-Regular" ,size: 20))
-                        .frame(width: Screen_Width*0.36, height: 60)
-                        .foregroundStyle(Color.black)
+                        .frame(width: Screen_Width*0.43, height: 60)
+                        .foregroundStyle(Color.accentColorInvert)
+                        .padding(.top, 160)
+                        
+
 
 
                     Spacer()
@@ -41,5 +38,4 @@ struct NavigationBar: View {
 #Preview {
     NavigationBar()
         .previewLayout(.sizeThatFits)
-        .padding()
 }

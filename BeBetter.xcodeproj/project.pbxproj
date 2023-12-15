@@ -13,7 +13,8 @@
 		F26F10F82AE1C94A0068B998 /* Sunlight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F72AE1C94A0068B998 /* Sunlight.otf */; };
 		F26F10FB2AE1CA2A0068B998 /* Big Movie.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F92AE1CA290068B998 /* Big Movie.otf */; };
 		F26F10FC2AE1CA2A0068B998 /* Hedgehog.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10FA2AE1CA290068B998 /* Hedgehog.otf */; };
-		F26F10FE2AE1D0AE0068B998 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F10FD2AE1D0AE0068B998 /* OptionsView.swift */; };
+		F281910F2B2CCE0D00EBAE38 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281910E2B2CCE0D00EBAE38 /* SideMenu.swift */; };
+		F28191112B2CCF0500EBAE38 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28191102B2CCF0500EBAE38 /* NavigationBar.swift */; };
 		F2A53EC82B2B4C6600AE0C27 /* Korisnik.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A53EC72B2B4C6600AE0C27 /* Korisnik.swift */; };
 		F2BA0ABB2B2896AB00631DB9 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA0ABA2B2896AB00631DB9 /* PostRequest.swift */; };
 		F2BD09A22AE3276F0047FB67 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A12AE3276F0047FB67 /* Study.swift */; };
@@ -33,7 +34,6 @@
 		F2D8FAF52AE04F3C006997F3 /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF32AE04F3C006997F3 /* Foreground.swift */; };
 		F2D8FAF72AE05069006997F3 /* Register_screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF62AE05069006997F3 /* Register_screen.swift */; };
 		F2D8FAF92AE05586006997F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAF82AE05586006997F3 /* MainView.swift */; };
-		F2D8FB002AE0664B006997F3 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FAFF2AE0664B006997F3 /* SettingsButton.swift */; };
 		F2D8FB022AE06A23006997F3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8FB012AE06A23006997F3 /* Login.swift */; };
 /* End PBXBuildFile section */
 
@@ -119,7 +119,8 @@
 		F26F10F72AE1C94A0068B998 /* Sunlight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sunlight.otf; sourceTree = "<group>"; };
 		F26F10F92AE1CA290068B998 /* Big Movie.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Big Movie.otf"; sourceTree = "<group>"; };
 		F26F10FA2AE1CA290068B998 /* Hedgehog.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hedgehog.otf; sourceTree = "<group>"; };
-		F26F10FD2AE1D0AE0068B998 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		F281910E2B2CCE0D00EBAE38 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		F28191102B2CCF0500EBAE38 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		F2A53EC72B2B4C6600AE0C27 /* Korisnik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korisnik.swift; sourceTree = "<group>"; };
 		F2BA0ABA2B2896AB00631DB9 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		F2BD09A12AE3276F0047FB67 /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 		F2D8FAF32AE04F3C006997F3 /* Foreground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
 		F2D8FAF62AE05069006997F3 /* Register_screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register_screen.swift; sourceTree = "<group>"; };
 		F2D8FAF82AE05586006997F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		F2D8FAFF2AE0664B006997F3 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		F2D8FB012AE06A23006997F3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,9 +311,9 @@
 				F2D8FAF62AE05069006997F3 /* Register_screen.swift */,
 				F2D8FAF22AE04F3C006997F3 /* Background.swift */,
 				F2BD09A72AE32A340047FB67 /* Background2.swift */,
+				F28191102B2CCF0500EBAE38 /* NavigationBar.swift */,
 				F2D8FAF32AE04F3C006997F3 /* Foreground.swift */,
-				F2D8FAFF2AE0664B006997F3 /* SettingsButton.swift */,
-				F26F10FD2AE1D0AE0068B998 /* OptionsView.swift */,
+				F281910E2B2CCE0D00EBAE38 /* SideMenu.swift */,
 				F2D8FAE82AE04F05006997F3 /* Assets.xcassets */,
 				F26F10F42AE1BAB90068B998 /* Info.plist */,
 				F2D8FAEA2AE04F05006997F3 /* Preview Content */,
@@ -432,16 +432,16 @@
 				F2BD09A22AE3276F0047FB67 /* Study.swift in Sources */,
 				F2BA0ABB2B2896AB00631DB9 /* PostRequest.swift in Sources */,
 				F2A53EC82B2B4C6600AE0C27 /* Korisnik.swift in Sources */,
+				F281910F2B2CCE0D00EBAE38 /* SideMenu.swift in Sources */,
 				F2D8FAE52AE04F03006997F3 /* BeBetterApp.swift in Sources */,
+				F28191112B2CCF0500EBAE38 /* NavigationBar.swift in Sources */,
 				F2BD09A42AE327820047FB67 /* Work.swift in Sources */,
 				F2D8FB022AE06A23006997F3 /* Login.swift in Sources */,
 				F2D8FAF52AE04F3C006997F3 /* Foreground.swift in Sources */,
-				F26F10FE2AE1D0AE0068B998 /* OptionsView.swift in Sources */,
 				F23EFF902B2A5C9400C2FDD5 /* Icons.swift in Sources */,
 				F2BD09A82AE32A340047FB67 /* Background2.swift in Sources */,
 				F2BD09A62AE327900047FB67 /* Workout.swift in Sources */,
 				F2D8FAF72AE05069006997F3 /* Register_screen.swift in Sources */,
-				F2D8FB002AE0664B006997F3 /* SettingsButton.swift in Sources */,
 				F2D8FAF92AE05586006997F3 /* MainView.swift in Sources */,
 				F2D8FAF42AE04F3C006997F3 /* Background.swift in Sources */,
 			);

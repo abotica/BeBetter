@@ -45,6 +45,8 @@ struct Register_screen: View {
 //                    })
 //                    
 //                }
+            Circle()
+                .opacity(0)
                 .overlay(){
                     Button(action: {
                         
@@ -59,12 +61,13 @@ struct Register_screen: View {
                                     .shadow( radius: 1, x: 1, y: 0.5)
                                     .foregroundStyle(.black)
                                     .fontWeight(.black)
-                                    .clipShape(Circle())
-                                    .position(x: Screen_Width*0.1, y: Screen_Height*0.08)
+                                   
                                         })
                     
                                     
                 }
+                .frame(width: Screen_Width*0.1)
+                .position(x: Screen_Width*0.1, y: Screen_Height*0.08)
                 .onAppear(){
                     Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false){_ in
                         withAnimation(.bouncy(extraBounce: 0.3)){
@@ -78,8 +81,8 @@ struct Register_screen: View {
                 Spacer(minLength: Screen_Height*0.05)
                 Image("Bee")
                     .resizable()
-                    .frame(width: Screen_Width*0.3 , height: Screen_Height*0.16)
-                    .shadow(color: .black, radius: 5, x:6, y: 10)
+                    .frame(width: 100, height: 100)
+                    .shadow(color: .white, radius: 3)
                 
                 Spacer(minLength: Screen_Height*0)
                 

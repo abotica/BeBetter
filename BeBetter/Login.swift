@@ -72,7 +72,7 @@ struct Login: View {
 
                     
                     
-                    Text("Welcome!").font(.custom("Big Movie", size: 60))
+                    Text("Welcome!").font(.custom("Katibeh", size: 60))
                         .foregroundStyle(.black)
                     
                   
@@ -168,7 +168,7 @@ struct Login: View {
                     Spacer(minLength: 185)
 
             
-                    Text("By Beees").font(.custom("Big Movie", size: 40))
+                    Text("By Bees").font(.custom("Katibeh", size: 30))
         }
         
                         

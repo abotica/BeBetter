@@ -4,6 +4,12 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Nosifer-Regular.ttf</string>
+		<string>Katibeh-Regular.ttf</string>
+		<string>LobsterTwo-Italic.ttf</string>
+		<string>LobsterTwo-BoldItalic.ttf</string>
+		<string>LobsterTwo-Regular.ttf</string>
+		<string>LobsterTwo-Bold.ttf</string>
 		<string>HandWritingDemoRegular.ttf</string>
 		<string>Mardi Gras.otf</string>
 		<string>Sunlight.otf</string>

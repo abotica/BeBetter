@@ -16,7 +16,7 @@ struct MainView: View {
        
         ZStack{
             Background2()
-                .overlay(Text("BeBetter").font(.custom("Big Movie", size: 55)).padding(.leading, 2).overlay(Image("Bee").resizable().frame(width: 25, height: 25).rotationEffect(.degrees(20)), alignment: .topLeading), alignment: .topLeading)
+                .overlay(Text("beBetter").font(.custom("Katibeh-Regular", size: 40)).padding(.leading, 20).overlay(Image("Bee").resizable().frame(width: 25, height: 25).rotationEffect(.degrees(20)), alignment: .leading), alignment: .topLeading)
                 .overlay(SettingsButton().padding(.top), alignment: .topTrailing)
             
             
@@ -44,7 +44,7 @@ struct MainView: View {
                 else{
                     
                     Text("Working late Andrija! What will you do?")
-                        .font(.custom("Big Movie", size: 35))
+                        .font(.custom("Katibeh-Regular", size: 35))
                     
                 }
                 

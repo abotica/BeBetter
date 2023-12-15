@@ -28,6 +28,7 @@ struct Login: View {
     @Binding var isShownOnce: Bool
     @State var isActivated: Bool = false
     @State var showForeground: Bool = true
+    @State var fontName: String = "Katibeh-Regular"
     
     var body: some View {
      
@@ -72,7 +73,7 @@ struct Login: View {
 
                     
                     
-                    Text("Welcome!").font(.custom("Katibeh", size: 60))
+                    Text("Welcome!").font(.custom(fontName, size: 60))
                         .foregroundStyle(.black)
                     
                   
@@ -104,6 +105,9 @@ struct Login: View {
                                 .cornerRadius(50)
                                 .multilineTextAlignment(.center)
                                 .shadow(color: .black, radius: 1, x:6, y: 10)
+                                
+                        
+                                
                             
                     }
                     
@@ -152,7 +156,7 @@ struct Login: View {
                                 .frame(width: isActivated ? 140 : 50, height: isActivated ? 55 : 50)
                                 .shadow(color: .black, radius: 1, x:6, y: 8)
                                 .overlay(
-                                    Text(isActivated ? "Register" : "")
+                                    Text(isActivated ? "Sign up" : "")
                                         .font(.title3)
                                         .foregroundStyle(Color.black)
                                         .italic()
@@ -168,7 +172,7 @@ struct Login: View {
                     Spacer(minLength: 185)
 
             
-                    Text("By Bees").font(.custom("Katibeh", size: 30))
+                    Text("By Bees").font(.custom(fontName, size: 30)).foregroundStyle(.black)
         }
         
                         

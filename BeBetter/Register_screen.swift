@@ -90,9 +90,10 @@ struct Register_screen: View {
                                 {
                                     isActivated ? Spacer(minLength: Screen_Width*0.14) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Name: ")
-                                        .font(.title2)
-                                        .italic()
+                                        .font(.title3)
                                         .foregroundStyle(Color.black)
+                                        .italic()
+                                        .bold()
                                         .padding()
                                     
                                     TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.name)
@@ -111,9 +112,10 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Surname: ")
-                                        .font(.title2)
-                                        .italic()
+                                        .font(.title3)
                                         .foregroundStyle(Color.black)
+                                        .italic()
+                                        .bold()
                                         .padding()
                             
                                     
@@ -134,9 +136,10 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Username: ")
-                                        .font(.title2)
-                                        .italic()
+                                        .font(.title3)
                                         .foregroundStyle(Color.black)
+                                        .italic()
+                                        .bold()
                                         .padding()
                                     
                                     
@@ -156,9 +159,10 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.16) : Spacer(minLength: Screen_Width*0.32)
                                     Text("Email: ")
-                                        .font(.title2)
-                                        .italic()
+                                        .font(.title3)
                                         .foregroundStyle(Color.black)
+                                        .italic()
+                                        .bold()
                                         .padding()
                                     
                                     
@@ -178,9 +182,10 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Password: ")
-                                        .font(.title2)
-                                        .italic()
+                                        .font(.title3)
                                         .foregroundStyle(Color.black)
+                                        .italic()
+                                        .bold()
                                         .padding()
                                     
                                     
@@ -200,9 +205,10 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Confirm\npassword:")
-                                        .font(.title2)
-                                        .italic()
+                                        .font(.title3)
                                         .foregroundStyle(Color.black)
+                                        .italic()
+                                        .bold()
                                         .multilineTextAlignment(.center)
                                                             
                                     
@@ -237,6 +243,7 @@ struct Register_screen: View {
                                 .font(.title3)
                                 .foregroundStyle(Color.black)
                                 .italic()
+                                .bold()
                         
                         )
                     

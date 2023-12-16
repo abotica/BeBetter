@@ -21,6 +21,7 @@
 		F2BD09A42AE327820047FB67 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A32AE327820047FB67 /* Work.swift */; };
 		F2BD09A62AE327900047FB67 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A52AE327900047FB67 /* Workout.swift */; };
 		F2BD09A82AE32A340047FB67 /* Background2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD09A72AE32A340047FB67 /* Background2.swift */; };
+		F2C1AD7F2B2E45280056F80E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1AD7E2B2E45280056F80E /* SettingsView.swift */; };
 		F2D435992B2BBE1200335DB7 /* LobsterTwo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D435952B2BBE1200335DB7 /* LobsterTwo-BoldItalic.ttf */; };
 		F2D4359A2B2BBE1200335DB7 /* LobsterTwo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D435962B2BBE1200335DB7 /* LobsterTwo-Bold.ttf */; };
 		F2D4359B2B2BBE1200335DB7 /* LobsterTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D435972B2BBE1200335DB7 /* LobsterTwo-Regular.ttf */; };
@@ -127,6 +128,7 @@
 		F2BD09A32AE327820047FB67 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		F2BD09A52AE327900047FB67 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		F2BD09A72AE32A340047FB67 /* Background2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background2.swift; sourceTree = "<group>"; };
+		F2C1AD7E2B2E45280056F80E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F2D435952B2BBE1200335DB7 /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F2D435962B2BBE1200335DB7 /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
 		F2D435972B2BBE1200335DB7 /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				F2D8FAF82AE05586006997F3 /* MainView.swift */,
 				F2D8FB012AE06A23006997F3 /* Login.swift */,
 				F2D8FAF62AE05069006997F3 /* Register_screen.swift */,
+				F2C1AD7E2B2E45280056F80E /* SettingsView.swift */,
 				F2D8FAF22AE04F3C006997F3 /* Background.swift */,
 				F2BD09A72AE32A340047FB67 /* Background2.swift */,
 				F28191102B2CCF0500EBAE38 /* NavigationBar.swift */,
@@ -438,6 +441,7 @@
 				F2BD09A42AE327820047FB67 /* Work.swift in Sources */,
 				F2D8FB022AE06A23006997F3 /* Login.swift in Sources */,
 				F2D8FAF52AE04F3C006997F3 /* Foreground.swift in Sources */,
+				F2C1AD7F2B2E45280056F80E /* SettingsView.swift in Sources */,
 				F23EFF902B2A5C9400C2FDD5 /* Icons.swift in Sources */,
 				F2BD09A82AE32A340047FB67 /* Background2.swift in Sources */,
 				F2BD09A62AE327900047FB67 /* Workout.swift in Sources */,

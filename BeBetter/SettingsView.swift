@@ -42,7 +42,33 @@ struct imageSettingsModifier: ViewModifier{
 struct SettingsView: View {
     @State var Screen_Width = Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true)).Screen_Width
     @State var Screen_Height = Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true)).Screen_Height
+    @Binding var showMainView: Bool
+    
+    
     var body: some View {
+        
+        
+        Circle()
+            .opacity(0)
+            .overlay(){
+                Button(action: {
+                    
+                    showMainView = true
+                
+                    }, label: {
+                
+                        Image(systemName: "arrow.left")
+//                                .shadow( radius: 1, x: 1, y: 0.5)
+                                .foregroundStyle(.accentColorInvert)
+                                .fontWeight(.black)
+                               
+                                    })
+                
+                                
+            }
+            .frame(width: Screen_Width*0.1, height: Screen_Height*0.03)
+            .offset(x: -Screen_Width*0.4, y: Screen_Height*0.001)
+        
         ScrollView(.vertical, showsIndicators: false){
             
             VStack(spacing: 5) {
@@ -253,5 +279,5 @@ struct SettingsView: View {
     }
 }
 #Preview {
-    SettingsView()
+    SettingsView(showMainView: .constant(false))
 }

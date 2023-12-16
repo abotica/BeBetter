@@ -11,7 +11,7 @@ struct SideMenu: View {
     @State var Screen_Width = Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true)).Screen_Width
     @State var Screen_Height = Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true)).Screen_Height
     
-    @State var showSettingsView: Bool = false
+    @Binding var showMainView: Bool
     
     var body: some View {
         
@@ -19,9 +19,9 @@ struct SideMenu: View {
                 Button(action: {
                     
                     //sa animacijon trigera tamo u nekon if-u da se pokaže view
-                    withAnimation(.linear(duration: 0.5)){
-                        showSettingsView.toggle()
-                    }
+                    
+                        showMainView.toggle()
+                    
                     
                 }, label: {
                     HStack{
@@ -79,5 +79,5 @@ struct SideMenu: View {
     
 
 #Preview {
-    SideMenu()
+    SideMenu(showMainView: .constant(true))
 }

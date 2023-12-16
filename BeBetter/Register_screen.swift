@@ -52,7 +52,7 @@ struct Register_screen: View {
                         }, label: {
                     
                             Image(systemName: "arrow.left")
-                                    .shadow( radius: 1, x: 1, y: 0.5)
+//                                    .shadow( radius: 1, x: 1, y: 0.5)
                                     .foregroundStyle(.black)
                                     .fontWeight(.black)
                                    

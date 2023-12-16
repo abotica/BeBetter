@@ -7,7 +7,7 @@ struct MainView: View {
     @State var Screen_Height = Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true)).Screen_Height
     @State private var showMenu: Bool = false
     
-    
+    @Binding var showMainView: Bool
     var body: some View {
     
        
@@ -76,7 +76,7 @@ struct MainView: View {
                 GeometryReader{ _ in
                     HStack {
                         Spacer()
-                        SideMenu()
+                        SideMenu(showMainView: $showMainView)
                             .offset(x: showMenu ? 0 : UIScreen.main.bounds.width)
                             .animation(.linear(duration: 0.3), value: showMenu)
                     }
@@ -121,5 +121,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    MainView(showMainView: .constant(true))
 }

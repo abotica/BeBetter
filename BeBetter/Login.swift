@@ -14,7 +14,32 @@
 
 import SwiftUI
 
+struct fieldModifier: ViewModifier {
+    
+    @Binding var isActivated: Bool
+    
+    func body(content: Content) -> some View {
+        content
+            .bold()
+            .frame(width: isActivated ? 220 : 50, height: isActivated ? 55 : 50)
+            .background(Color.white)
+            .font(.title3)
+            .cornerRadius(50)
+            .multilineTextAlignment(.center)
+            .shadow(color: .black, radius: 1, x:6, y: 10)
+    }
+}
 
+struct textModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title3)
+            .foregroundStyle(Color.black)
+            .italic()
+            .bold()
+            
+    }
+}
 
 
 struct Login: View {
@@ -29,6 +54,7 @@ struct Login: View {
     @State var isActivated: Bool = false
     @State var showForeground: Bool = true
     @State var fontName: String = "Katibeh-Regular"
+    
     
     var body: some View {
      
@@ -71,44 +97,21 @@ struct Login: View {
                         .frame(width: 100, height: 100)
                         .shadow(color: .white, radius: 3)
 
-                    
-                    
                     Text("Welcome!").font(.custom(fontName, size: 60))
                         .foregroundStyle(.black)
-                    
-                  
-                    
-                    
-                    
                     
                     HStack(alignment: .center)
                     {
                        
                         TextField(isActivated ? "Username" : "", text: $usernameLog)
-                            .bold()
-                            .frame(width: isActivated ? 220 : 50, height: isActivated ? 55 : 50)
-                            .background(Color.white)
-                            .font(.title3)
-                            .cornerRadius(50)
-                            .multilineTextAlignment(.center)
-                            .shadow(color: .black, radius: 1, x:6, y: 10)
                             
+                            .modifier(fieldModifier(isActivated: $isActivated))
                     }
                         
                     HStack(alignment: .center){
                             
                         SecureField(isActivated ? "Password" : "", text: $passwordLog)
-                                .bold()
-                                .frame(width: isActivated ? 220 : 50, height: isActivated ? 55 : 50)
-                                .background(Color.white)
-                                .font(.title3)
-                                .cornerRadius(50)
-                                .multilineTextAlignment(.center)
-                                .shadow(color: .black, radius: 1, x:6, y: 10)
-                                
-                        
-                                
-                            
+                                .modifier(fieldModifier(isActivated: $isActivated))
                     }
                     
                     HStack(spacing: 20)
@@ -131,10 +134,7 @@ struct Login: View {
                                 .shadow(color: .black, radius: 1, x:6, y: 8)
                                 .overlay(
                                     Text(isActivated ? "Login" : "")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
+                                        .modifier(textModifier())
                                 )
                             
                         })
@@ -157,10 +157,7 @@ struct Login: View {
                                 .shadow(color: .black, radius: 1, x:6, y: 8)
                                 .overlay(
                                     Text(isActivated ? "Sign up" : "")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
+                                        .modifier(textModifier())
                                 )
                             
                         })

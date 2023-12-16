@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+struct fieldModifierRegister: ViewModifier {
+    @Binding var isActivated: Bool
+    @Binding var Screen_Width: CGFloat
+    func body(content: Content) -> some View {
+        content
+            .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
+            .background(Color.white)
+            .font(.title3)
+            .foregroundStyle(Color.black)
+            .cornerRadius(50)
+            .multilineTextAlignment(.center)
+            .shadow(color: .black, radius: 1, x:6, y: 10)
+            
+    }
+}
+
 struct Register_screen: View {
     @ObservedObject var KorisnikModel = KorisnikViewModel()
     @Binding var goBack: Bool
@@ -22,31 +38,7 @@ struct Register_screen: View {
         ZStack{
             LinearGradient(colors: [Color(#colorLiteral(red: 0.9139844775, green: 0.767064631, blue: 0.4150085449, alpha: 1)), Color(#colorLiteral(red: 0.9025250077, green: 0.4324684143, blue: 0.3178541958, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
-//                .safeAreaInset(edge: .top, alignment: .leading){
-//                    
-//                    Button(action: {
-//                        
-//                        //vrati se nazad
-//                        
-//                    }, label: {
-//                        
-//                        Circle()
-//                            .opacity(0)
-//                            .overlay(content: {
-//                                Image(systemName: "arrow.left")
-//                                    .shadow( radius: 1, x: 1, y: 0.5)
-//                                    .foregroundStyle(.black)
-//                                    .fontWeight(.black)
-//                                    .clipShape(Circle())
-//                            })
-//                        .frame(width: Screen_Width*0.1)
-//                        .padding(.top, Screen_Height*0.04)
-//            
-//                        
-//                        
-//                    })
-//                    
-//                }
+
             Circle()
                 .opacity(0)
                 .overlay(){
@@ -92,20 +84,11 @@ struct Register_screen: View {
                                 {
                                     isActivated ? Spacer(minLength: Screen_Width*0.14) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Name: ")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
+                                        .modifier(textModifier())
                                         .padding()
                                     
                                     TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.name)
-                                        .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
-                                        .background(Color.white)
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .cornerRadius(50)
-                                        .multilineTextAlignment(.center)
-                                        .shadow(color: .black, radius: 1, x:6, y: 10)
+                                        .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                 }
@@ -114,21 +97,12 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Surname: ")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
+                                        .modifier(textModifier())
                                         .padding()
                             
                                     
                                     TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.surname)
-                                        .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
-                                        .background(Color.white)
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .cornerRadius(50)
-                                        .multilineTextAlignment(.center)
-                                        .shadow(color: .black, radius: 1, x:6, y: 10)
+                                        .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.1) : Spacer(minLength: Screen_Width*0.31)
                                 
@@ -138,21 +112,12 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Username: ")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
+                                        .modifier(textModifier())
                                         .padding()
                                     
                                     
                                     TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.username)
-                                        .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
-                                        .background(Color.white)
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .cornerRadius(50)
-                                        .multilineTextAlignment(.center)
-                                        .shadow(color: .black, radius: 1, x:6, y: 10)
+                                        .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.1) : Spacer(minLength: Screen_Width*0.31)
                                 }
@@ -161,21 +126,11 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.16) : Spacer(minLength: Screen_Width*0.32)
                                     Text("Email: ")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
-                                        .padding()
+                                        .modifier(textModifier())                                        .padding()
                                     
                                     
                                     TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.email)
-                                        .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
-                                        .background(Color.white)
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .cornerRadius(50)
-                                        .multilineTextAlignment(.center)
-                                        .shadow(color: .black, radius: 1, x:6, y: 10)
+                                        .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.0) : Spacer(minLength: Screen_Width*0.06)
                                 }
@@ -184,21 +139,12 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Password: ")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
+                                        .modifier(textModifier())
                                         .padding()
                                     
                                     
                                     SecureField(isActivated ? "Required" : "", text: $password /*$KorisnikModel.korisnik.password*/)
-                                        .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
-                                        .background(Color.white)
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .cornerRadius(50)
-                                        .multilineTextAlignment(.center)
-                                        .shadow(color: .black, radius: 1, x:6, y: 10)
+                                        .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.1) : Spacer(minLength: Screen_Width*0.31)
                                 }
@@ -207,23 +153,12 @@ struct Register_screen: View {
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                     Text("Confirm\npassword:")
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .italic()
-                                        .bold()
+                                        .modifier(textModifier())
                                         .multilineTextAlignment(.center)
                                                             
                                     
-                                    SecureField(isActivated ? "Required" : "", text: $confirmPassword /*$KorisnikModel.korisnik.confirmPassword*/)
-                                        .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
-                                        .background(Color.white)
-                                        .font(.title3)
-                                        .foregroundStyle(Color.black)
-                                        .cornerRadius(50)
-                                        .multilineTextAlignment(.center)
-                                        .shadow(color: .black, radius: 1, x:6, y: 10)
-                                    
-                                   
+                                    SecureField(isActivated ? "Required" : "", text: $confirmPassword)
+                                        .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.25)
                                     

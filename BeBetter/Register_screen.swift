@@ -16,6 +16,8 @@ struct Register_screen: View {
     @State var isActivated: Bool = false
     @State var Screen_Width = UIScreen.main.bounds.width
     @State var Screen_Height = UIScreen.main.bounds.height
+    @State var password: String = ""
+    @State var confirmPassword: String = ""
     var body: some View {
         ZStack{
             LinearGradient(colors: [Color(#colorLiteral(red: 0.9139844775, green: 0.767064631, blue: 0.4150085449, alpha: 1)), Color(#colorLiteral(red: 0.9025250077, green: 0.4324684143, blue: 0.3178541958, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -189,7 +191,7 @@ struct Register_screen: View {
                                         .padding()
                                     
                                     
-                                    SecureField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.password)
+                                    SecureField(isActivated ? "Required" : "", text: $password /*$KorisnikModel.korisnik.password*/)
                                         .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
                                         .background(Color.white)
                                         .font(.title3)
@@ -212,7 +214,7 @@ struct Register_screen: View {
                                         .multilineTextAlignment(.center)
                                                             
                                     
-                                    SecureField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.confirmPassword)
+                                    SecureField(isActivated ? "Required" : "", text: $confirmPassword /*$KorisnikModel.korisnik.confirmPassword*/)
                                         .frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? 55:50)
                                         .background(Color.white)
                                         .font(.title3)
@@ -232,7 +234,19 @@ struct Register_screen: View {
                 Spacer(minLength: Screen_Height*0)
                 Button(action:
                         {
-                    KorisnikModel.sendDataToServer()
+                    if( confirmPassword != password){
+                        
+                        
+                        
+                    }
+                    else if(confirmPassword == password){
+                        
+                        KorisnikModel.korisnik.password = password
+                        KorisnikModel.korisnik.confirmPassword = confirmPassword
+                        KorisnikModel.sendDataToServer()
+                        
+                    }
+                    
                 }, label: {
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.white)

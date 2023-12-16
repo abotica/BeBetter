@@ -127,12 +127,12 @@
 		F2BD09A32AE327820047FB67 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		F2BD09A52AE327900047FB67 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		F2BD09A72AE32A340047FB67 /* Background2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background2.swift; sourceTree = "<group>"; };
-		F2D435952B2BBE1200335DB7 /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-BoldItalic.ttf"; path = "../../../../../Downloads/Lobster_Two/LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
-		F2D435962B2BBE1200335DB7 /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-Bold.ttf"; path = "../../../../../Downloads/Lobster_Two/LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
-		F2D435972B2BBE1200335DB7 /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-Regular.ttf"; path = "../../../../../Downloads/Lobster_Two/LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
-		F2D435982B2BBE1200335DB7 /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-Italic.ttf"; path = "../../../../../Downloads/Lobster_Two/LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
-		F2D4359F2B2BC13B00335DB7 /* Katibeh-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Katibeh-Regular.ttf"; path = "../../../../../Downloads/Katibeh/Katibeh-Regular.ttf"; sourceTree = "<group>"; };
-		F2D435A12B2BC21E00335DB7 /* Nosifer-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nosifer-Regular.ttf"; path = "../../../../../Downloads/Nosifer/Nosifer-Regular.ttf"; sourceTree = "<group>"; };
+		F2D435952B2BBE1200335DB7 /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F2D435962B2BBE1200335DB7 /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
+		F2D435972B2BBE1200335DB7 /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
+		F2D435982B2BBE1200335DB7 /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
+		F2D4359F2B2BC13B00335DB7 /* Katibeh-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Katibeh-Regular.ttf"; sourceTree = "<group>"; };
+		F2D435A12B2BC21E00335DB7 /* Nosifer-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nosifer-Regular.ttf"; sourceTree = "<group>"; };
 		F2D8FAE12AE04F03006997F3 /* BeBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D8FAE42AE04F03006997F3 /* BeBetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBetterApp.swift; sourceTree = "<group>"; };
 		F2D8FAE82AE04F05006997F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };

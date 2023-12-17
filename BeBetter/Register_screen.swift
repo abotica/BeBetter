@@ -18,10 +18,14 @@ struct fieldModifierRegister: ViewModifier {
             .foregroundStyle(Color.black)
             .cornerRadius(50)
             .multilineTextAlignment(.center)
-            .shadow(color: .black, radius: 1, x:6, y: 10)
-            
+            .tint(.black)
     }
 }
+
+func isValidEmail(_ email: String) -> Bool {
+        let regex = try! NSRegularExpression(pattern: "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$", options: [.caseInsensitive])
+        return regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.utf16.count)) != nil
+    }
 
 struct Register_screen: View {
     @ObservedObject var KorisnikModel = KorisnikViewModel()
@@ -32,8 +36,32 @@ struct Register_screen: View {
     @State var isActivated: Bool = false
     @State var Screen_Width = UIScreen.main.bounds.width
     @State var Screen_Height = UIScreen.main.bounds.height
+    @State var placeholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    @State var confPassPlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    @State var passwordPlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    @State var passwordPlaceholder = "Required"
+    @State var confPassPlaceholder = "Required"
+    @State var confPassTextOpacity: CGFloat = 0.0
+//    @State var shadowConfPassY: CGFloat = 8
+//    @State var shadowPassY: CGFloat = 8
+    @State var roundedRectY: CGFloat = 55
+    @State var shadowColorConfPass = Color.black
+    @State var confPassBorderOpacity: CGFloat = 0.0
     @State var password: String = ""
     @State var confirmPassword: String = ""
+    @State var email: String = ""
+    @State var emailPlaceholder: String = "Required"
+    @State var emailPlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    @State var name: String = ""
+    @State var surname: String = ""
+    @State var username: String = ""
+    @State var namePlaceholder: String = "Required"
+    @State var namePlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    @State var surnamePlaceholder: String = "Required"
+    @State var surnamePlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    @State var userNamePlaceholder: String = "Required"
+    @State var userNamePlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    
     var body: some View {
         ZStack{
             LinearGradient(colors: [Color(#colorLiteral(red: 0.9139844775, green: 0.767064631, blue: 0.4150085449, alpha: 1)), Color(#colorLiteral(red: 0.9025250077, green: 0.4324684143, blue: 0.3178541958, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -70,7 +98,7 @@ struct Register_screen: View {
                     }
                 }
             
-            
+        
             VStack(spacing: Screen_Height*0.026){
                 Spacer(minLength: Screen_Height*0.05)
                 Image("Bee")
@@ -87,8 +115,10 @@ struct Register_screen: View {
                                         .modifier(textModifier())
                                         .padding()
                                     
-                                    TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.name)
+                                    TextField("", text: $name, prompt: isActivated ? Text(namePlaceholder).italic()
+                                        .foregroundColor(namePlaceholderColor) : Text(""))
                                         .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
+                                        .shadow(color: .black, radius: 0, x:4, y: 8)
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.2)
                                 }
@@ -101,8 +131,10 @@ struct Register_screen: View {
                                         .padding()
                             
                                     
-                                    TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.surname)
+                                    TextField("", text: $surname, prompt: isActivated ? Text(surnamePlaceholder).italic()
+                                        .foregroundColor(surnamePlaceholderColor) : Text(""))
                                         .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
+                                        .shadow(color: .black, radius: 0, x:4, y: 8)
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.1) : Spacer(minLength: Screen_Width*0.31)
                                 
@@ -116,8 +148,10 @@ struct Register_screen: View {
                                         .padding()
                                     
                                     
-                                    TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.username)
+                                    TextField("", text: $username, prompt: isActivated ? Text(userNamePlaceholder).italic()
+                                        .foregroundColor(userNamePlaceholderColor) : Text(""))
                                         .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
+                                        .shadow(color: .black, radius: 0, x:4, y: 8)
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.1) : Spacer(minLength: Screen_Width*0.31)
                                 }
@@ -129,8 +163,10 @@ struct Register_screen: View {
                                         .modifier(textModifier())                                        .padding()
                                     
                                     
-                                    TextField(isActivated ? "Required" : "", text: $KorisnikModel.korisnik.email)
+                                    TextField("", text: $email, prompt: isActivated ? Text(emailPlaceholder).italic()
+                                        .foregroundColor(emailPlaceholderColor) : Text(""))
                                         .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
+                                        .shadow(color: .black, radius: 0, x:4, y: 8)
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.0) : Spacer(minLength: Screen_Width*0.06)
                                 }
@@ -143,8 +179,10 @@ struct Register_screen: View {
                                         .padding()
                                     
                                     
-                                    SecureField(isActivated ? "Required" : "", text: $password /*$KorisnikModel.korisnik.password*/)
+                                    SecureField("", text: $password, prompt: isActivated ? Text(passwordPlaceholder).italic()
+                                        .foregroundColor(passwordPlaceholderColor) : Text(""))
                                         .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
+                                        .shadow(color: .black, radius: 0, x:4, y: 8)
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.1) : Spacer(minLength: Screen_Width*0.31)
                                 }
@@ -157,8 +195,25 @@ struct Register_screen: View {
                                         .multilineTextAlignment(.center)
                                                             
                                     
-                                    SecureField(isActivated ? "Required" : "", text: $confirmPassword)
+                                    SecureField("", text: $confirmPassword, prompt: isActivated ? Text(confPassPlaceholder).italic()
+                                        .foregroundColor(confPassPlaceholderColor) : Text(""))
                                         .modifier(fieldModifierRegister(isActivated: $isActivated, Screen_Width: $Screen_Width))
+                                        .shadow(color: shadowColorConfPass, radius: 0, x:4, y: 8)
+//                                        .overlay(){
+//                                            RoundedRectangle(cornerRadius: 50).stroke(.black, lineWidth: 0.5).opacity(confPassBorderOpacity)
+//                                            
+//                                        }
+//                                        .background(){
+//                                            
+//                                            RoundedRectangle(cornerRadius: 50).frame(width: isActivated ? Screen_Width*0.5:50, height: isActivated ? roundedRectY:50).foregroundStyle(shadowColorConfPass).overlay(){
+//                                                Text("Incorrect password").opacity(confPassTextOpacity).foregroundStyle(Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69)))
+//                                            }
+//                                        }
+                                        
+                                    
+
+                                    
+                                        
                                     
                                     isActivated ? Spacer(minLength: Screen_Width*0.01) : Spacer(minLength: Screen_Width*0.25)
                                     
@@ -169,15 +224,72 @@ struct Register_screen: View {
                 Spacer(minLength: Screen_Height*0)
                 Button(action:
                         {
+                    print(password, confirmPassword, email)
+                    
                     if( confirmPassword != password){
                         
+                        confirmPassword = ""
+//                        password = ""
+                        //                        confPassPlaceholder = "Incorrect password"
+                        //                        confPassPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+//                        withAnimation(.linear(duration: 0.2)){
+                            
+                            confPassPlaceholder = "Retry password"
+                            confPassPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                            //                            shadowColorConfPass = Color.white
+                            //                            confPassBorderOpacity = 0.3
+                            //                            confPassTextOpacity = 1.0
+                            //                            roundedRectY = 60
+//                        }
                         
                         
                     }
-                    else if(confirmPassword == password){
-                        
+                    else if(password == ""){
+                        confirmPassword = ""
+                        passwordPlaceholder = "Enter password"
+                        passwordPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                        if(confirmPassword == ""){
+                            confPassPlaceholder = "Reenter password"
+                            confPassPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                        }
+                    }
+                    else if(confirmPassword == ""){
+                    password = ""
+                    confPassPlaceholder = "Reenter password"
+                    confPassPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                    if(password == ""){
+                        passwordPlaceholder = "Enter password"
+                        passwordPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                    }
+                }
+                    if(!isValidEmail(email)){
+                        email = ""
+                        emailPlaceholder = "Incorrect format"
+                        emailPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                    }
+                    if(name == ""){
+                        namePlaceholder = "Enter name"
+                        namePlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                    }
+                    
+                    if(surname == ""){
+                        surnamePlaceholder = "Enter surname"
+                        surnamePlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                    }
+                    
+                    if(username == ""){
+                        userNamePlaceholder = "Enter username"
+                        userNamePlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                    }
+                    
+                    if((confirmPassword == password) && (confirmPassword != "") && (password != "") && isValidEmail(email) && (name != "") && (surname != "") && (username != "")){
+                        print("Uslo je u slanje", email)
+                        KorisnikModel.korisnik.name = name
+                        KorisnikModel.korisnik.surname = surname
+                        KorisnikModel.korisnik.username = username
                         KorisnikModel.korisnik.password = password
                         KorisnikModel.korisnik.confirmPassword = confirmPassword
+                        KorisnikModel.korisnik.email = email
                         KorisnikModel.sendDataToServer()
                         
                     }
@@ -186,7 +298,7 @@ struct Register_screen: View {
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.white)
                         .frame(width: isActivated ? Screen_Width*0.3 : 50, height: isActivated ? 55 : 50)
-                        .shadow(color: .black, radius: 1, x:6, y: 8)
+                        .shadow(color: .black, radius: 0, x:4, y: 8)
                         .overlay(
                             Text(isActivated ? "Register" : "")
                                 .font(.title3)

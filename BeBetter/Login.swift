@@ -23,10 +23,11 @@ struct fieldModifier: ViewModifier {
             .bold()
             .frame(width: isActivated ? 220 : 50, height: isActivated ? 55 : 50)
             .background(Color.white)
+            .foregroundStyle(Color.black)
             .font(.title3)
             .cornerRadius(50)
             .multilineTextAlignment(.center)
-            .shadow(color: .black, radius: 1, x:6, y: 10)
+            .shadow(color: .black, radius: 0, x:4, y: 8)
     }
 }
 
@@ -54,6 +55,7 @@ struct Login: View {
     @State var isActivated: Bool = false
     @State var showForeground: Bool = true
     @State var fontName: String = "Katibeh-Regular"
+    @State var placeholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
     
     
     var body: some View {
@@ -103,14 +105,16 @@ struct Login: View {
                     HStack(alignment: .center)
                     {
                        
-                        TextField(isActivated ? "Username" : "", text: $usernameLog)
+                        TextField("", text: $usernameLog, prompt: isActivated ? Text("Username").italic()
+                            .foregroundColor(placeholderColor) : Text(""))
                             
                             .modifier(fieldModifier(isActivated: $isActivated))
                     }
                         
                     HStack(alignment: .center){
                             
-                        SecureField(isActivated ? "Password" : "", text: $passwordLog)
+                        SecureField("", text: $passwordLog, prompt: isActivated ? Text("Password").italic()
+                            .foregroundColor(placeholderColor) : Text(""))
                                 .modifier(fieldModifier(isActivated: $isActivated))
                     }
                     
@@ -131,7 +135,7 @@ struct Login: View {
                             RoundedRectangle(cornerRadius: 25)
                                 .fill(Color.white)
                                 .frame(width: isActivated ? 140 : 50, height: isActivated ? 55 : 50)
-                                .shadow(color: .black, radius: 1, x:6, y: 8)
+                                .shadow(color: .black, radius: 0, x:4, y: 8)
                                 .overlay(
                                     Text(isActivated ? "Login" : "")
                                         .modifier(textModifier())
@@ -154,7 +158,7 @@ struct Login: View {
                             RoundedRectangle(cornerRadius: 25)
                                 .fill(Color.white)
                                 .frame(width: isActivated ? 140 : 50, height: isActivated ? 55 : 50)
-                                .shadow(color: .black, radius: 1, x:6, y: 8)
+                                .shadow(color: .black, radius: 0, x:4, y: 8)
                                 .overlay(
                                     Text(isActivated ? "Sign up" : "")
                                         .modifier(textModifier())

@@ -56,7 +56,10 @@ struct Login: View {
     @State var showForeground: Bool = true
     @State var fontName: String = "Katibeh-Regular"
     @State var placeholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
-    
+    @State var usernamePlaceholder: String = "Username"
+    @State var passwordPlaceholder: String = "Password"
+    @State var usernamePlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
+    @State var passwordPlaceholderColor = Color(#colorLiteral(red: 0.6244561076, green: 0.6244561076, blue: 0.6244561076, alpha: 0.6230674342))
     
     var body: some View {
      
@@ -105,16 +108,16 @@ struct Login: View {
                     HStack(alignment: .center)
                     {
                        
-                        TextField("", text: $usernameLog, prompt: isActivated ? Text("Username").italic()
-                            .foregroundColor(placeholderColor) : Text(""))
+                        TextField("", text: $usernameLog, prompt: isActivated ? Text(usernamePlaceholder).italic()
+                            .foregroundColor(usernamePlaceholderColor) : Text(""))
                             
                             .modifier(fieldModifier(isActivated: $isActivated))
                     }
                         
                     HStack(alignment: .center){
                             
-                        SecureField("", text: $passwordLog, prompt: isActivated ? Text("Password").italic()
-                            .foregroundColor(placeholderColor) : Text(""))
+                        SecureField("", text: $passwordLog, prompt: isActivated ? Text(passwordPlaceholder).italic()
+                            .foregroundColor(passwordPlaceholderColor) : Text(""))
                                 .modifier(fieldModifier(isActivated: $isActivated))
                     }
                     
@@ -124,11 +127,21 @@ struct Login: View {
                         Spacer()
                         Button(action:
                                 {
+                            //nadodat usporedbu podataka iz baze, umisto else stavit else if pa ako je tocno uc u main
                             
-                           isLoggedIn = true
-                            removeLoginView = true
-                        
-                            
+                            if(usernameLog == "" || passwordLog == ""){
+                                usernamePlaceholder = "Retry username"
+                                passwordPlaceholder = "Retry password"
+                                passwordPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                                usernamePlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                                
+                            }//ovo je fake linija
+                            else if(usernameLog == "abotica" && passwordLog == "beBetter"){
+                                isLoggedIn = true
+                                removeLoginView = true
+                                
+                            }
+                           
                             
                             
                         }, label: {

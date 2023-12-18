@@ -290,6 +290,10 @@ struct Register_screen: View {
                         KorisnikModel.korisnik.password = password
                         KorisnikModel.korisnik.confirmPassword = confirmPassword
                         KorisnikModel.korisnik.email = email
+                        goBack = true
+                        isRegistered = false
+                        removeLoginView = false
+                        isShownOnce = false
                         KorisnikModel.sendDataToServer()
                         
                     }

@@ -31,10 +31,10 @@ class KorisnikViewModel: ObservableObject {
         }
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard let data = data, error == nil else {
-//                print("Error: \(error?.localizedDescription ?? "Unknown error")")
-//                return
-//            }
+            guard let _ = data, error == nil else {
+                print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
 
             if let httpResponse = response as? HTTPURLResponse {
                 print("Status Code: \(httpResponse.statusCode)")
@@ -49,5 +49,7 @@ class KorisnikViewModel: ObservableObject {
 
         task.resume()
     }
+    
+    
 }
 

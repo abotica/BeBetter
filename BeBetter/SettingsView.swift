@@ -12,8 +12,8 @@ struct textSettingsModifier: ViewModifier{
     @Binding var screenHeight : CGFloat
     func body(content: Content) -> some View{
         content
-        .font(.custom("Ketibeh-Regular", size: 27))
-        .frame(width: screenWidth/1.5, height: 100)
+        .font(.custom("Ketibeh-Regular", size: 22))
+        .frame(width: screenWidth/1, height: 72)
         .foregroundStyle(Color.accentColorInvert)
     }
 
@@ -32,9 +32,11 @@ struct dividerSettingsModifier: ViewModifier{
 struct imageSettingsModifier: ViewModifier{
     func body(content: Content) -> some View{
         content
-            .font(.largeTitle)
+            .font(.title2)
             .bold()
             .foregroundStyle(Color.accentColorInvert)
+            .padding(.trailing, 300)
+            
     }
 
 }
@@ -72,16 +74,18 @@ struct SettingsView: View {
         ScrollView(.vertical, showsIndicators: false){
             
             VStack(spacing: 5) {
+                Divider()
+                    .modifier(dividerSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
                 Button(action: {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "person.circle.fill")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("Change user data")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "person.circle.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -93,12 +97,11 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "paintbrush.fill")
-                            .modifier(imageSettingsModifier())
-                        
+                    
                         Text("Themes")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "paintbrush.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -110,12 +113,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "bell.fill")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("Notificiation")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "bell.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -127,12 +130,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "creditcard.fill")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("Payments")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "creditcard.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -144,12 +147,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "arrow.triangle.2.circlepath")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("Synchronize profile")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "arrow.triangle.2.circlepath")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -161,12 +164,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "shield.lefthalf.filled.badge.checkmark")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("Permissions")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "shield.lefthalf.filled.badge.checkmark")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -178,14 +181,16 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image("LanguageIcon")
-                            .resizable()
-                            .frame(width: 43, height: 43)
-                            .foregroundStyle(Color.accentColorInvert)
+                        
                         
                         Text("Language")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(
+                                Image("LanguageIcon")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .foregroundStyle(Color.accentColorInvert)
+                                .padding(.trailing, 300))
                     }
                 })
                 
@@ -197,12 +202,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "bubble.left.and.text.bubble.right.fill")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("FAQ")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "bubble.left.and.text.bubble.right.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -214,11 +219,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "newspaper.fill")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("News")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
+                            .overlay(Image(systemName: "newspaper.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -230,12 +236,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "exclamationmark.bubble.fill")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("Feedback")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "exclamationmark.bubble.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -247,12 +253,12 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "doc.text.fill")
-                            .modifier(imageSettingsModifier())
                         
-                        Text("Terms of service & privacy settings")
+                        
+                        Text("ToS and privacy")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "doc.text.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
                 
@@ -264,15 +270,16 @@ struct SettingsView: View {
                     
                 }, label: {
                     HStack{
-                        Image(systemName: "hand.thumbsup.fill")
-                            .modifier(imageSettingsModifier())
+                        
                         
                         Text("Rate us")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
-                        
+                            .overlay(Image(systemName: "hand.thumbsup.fill")
+                                .modifier(imageSettingsModifier()))
                     }
                 })
-                
+                Divider()
+                    .modifier(dividerSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
 
             }
         }

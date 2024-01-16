@@ -130,6 +130,7 @@ struct Login: View {
                             //nadodat usporedbu podataka iz baze, umisto else stavit else if pa ako je tocno uc u main
                             
                             if(usernameLog == "" || passwordLog == ""){
+                                
                                 usernamePlaceholder = "Retry username"
                                 passwordPlaceholder = "Retry password"
                                 passwordPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
@@ -140,8 +141,14 @@ struct Login: View {
                                 isLoggedIn = true
                                 removeLoginView = true
                                 
+                            }else if(usernameLog != "abotica" && passwordLog != "beBetter"){
+                                usernameLog = ""
+                                passwordLog = ""
+                                usernamePlaceholder = "Retry username"
+                                passwordPlaceholder = "Retry password"
+                                passwordPlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
+                                usernamePlaceholderColor = Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.69))
                             }
-                           
                             
                             
                         }, label: {

@@ -34,40 +34,44 @@ struct MainView: View {
                     
                     
                     
+                    
                     if(hour > 6 && hour < 12){
                         
-                        Text("Good morning Andrija! What will you do?")
+                        Text("Good morning Andrija!\n What will you do?")
                             .foregroundStyle(Color.accentColorInvert)
                             .font(.custom("Katibeh-Regular", size: 35))
-                        
+                            
                         
                     }
                     else if(hour >= 12 && hour < 17){
                         
-                        Text("Good evening Andrija! What will you do?")
+                        Text("Good evening Andrija!\n What will you do?")
                             .foregroundStyle(Color.accentColorInvert)
                             .font(.custom("Katibeh-Regular", size: 35))
                         
                     }
                     else{
                         
-                        Text("Working late Andrija! What will you do?")
+                        Text("Working late Andrija!\n What will you do?")
                             .foregroundStyle(Color.accentColorInvert)
                             .font(.custom("Katibeh-Regular", size: 35))
                         
+                            
+                            
+                    
                     }
                     
-                    ScrollView(.horizontal, showsIndicators: false){
+                    ScrollView(.vertical, showsIndicators: false){
                         
-                        HStack(spacing: 20) {
+                        VStack(spacing: 20) {
                             Icons()
                         }
-                        .frame(height: 225)
-                        
+                        .frame(width: 300)
                         
                     }
                     
-                    Spacer(minLength: Screen_Height*0.4)
+                    
+                    
                     
                     
                     

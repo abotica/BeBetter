@@ -32,6 +32,7 @@ struct BeBetterApp: App {
                 }
                 else if(!showMainView){
                     SettingsView(showMainView: $showMainView)
+                    
                 }
                
             }

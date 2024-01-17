@@ -13,7 +13,7 @@ struct textSettingsModifier: ViewModifier{
     func body(content: Content) -> some View{
         content
         .font(.custom("Ketibeh-Regular", size: 22))
-        .frame(width: screenWidth/1, height: 72)
+        .frame(width: screenWidth/2, height: 70)
         .foregroundStyle(Color.accentColorInvert)
     }
 
@@ -42,6 +42,7 @@ struct imageSettingsModifier: ViewModifier{
 }
 
 struct SettingsView: View {
+    @State private var showChangeUserDataOptions = false
     @State var Screen_Width = Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true)).Screen_Width
     @State var Screen_Height = Register_screen(goBack: .constant(false), removeLoginView: .constant(false), isRegistered: .constant(false), isShownOnce: .constant(true)).Screen_Height
     @Binding var showMainView: Bool
@@ -78,9 +79,10 @@ struct SettingsView: View {
                     .modifier(dividerSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
                 Button(action: {
                     
+                    showChangeUserDataOptions.toggle()
+                    
                 }, label: {
                     HStack{
-                        
                         
                         Text("Change user data")
                             .modifier(textSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
@@ -88,7 +90,10 @@ struct SettingsView: View {
                                 .modifier(imageSettingsModifier()))
                     }
                 })
+                .fullScreenCover(isPresented: $showChangeUserDataOptions, content: {
+                    ChangeUserData_option(goBack: $showChangeUserDataOptions)})
                 
+                    
                 Divider()
                     .modifier(dividerSettingsModifier(screenWidth: $Screen_Width, screenHeight: $Screen_Height))
                 

@@ -13,6 +13,9 @@
 		F26F10F82AE1C94A0068B998 /* Sunlight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F72AE1C94A0068B998 /* Sunlight.otf */; };
 		F26F10FB2AE1CA2A0068B998 /* Big Movie.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F92AE1CA290068B998 /* Big Movie.otf */; };
 		F26F10FC2AE1CA2A0068B998 /* Hedgehog.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10FA2AE1CA290068B998 /* Hedgehog.otf */; };
+		F270D9ED2B58542500BF8BEE /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270D9EC2B58542500BF8BEE /* ToDoList.swift */; };
+		F270D9F22B5864C000BF8BEE /* ClockTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270D9F02B5864C000BF8BEE /* ClockTry.swift */; };
+		F270D9F32B5864C000BF8BEE /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270D9F12B5864C000BF8BEE /* Calendar.swift */; };
 		F281910F2B2CCE0D00EBAE38 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281910E2B2CCE0D00EBAE38 /* SideMenu.swift */; };
 		F28191112B2CCF0500EBAE38 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28191102B2CCF0500EBAE38 /* NavigationBar.swift */; };
 		F284335D2B55DF160072EBE6 /* ChangeUserData-option.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284335C2B55DF160072EBE6 /* ChangeUserData-option.swift */; };
@@ -125,6 +128,9 @@
 		F26F10F72AE1C94A0068B998 /* Sunlight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sunlight.otf; sourceTree = "<group>"; };
 		F26F10F92AE1CA290068B998 /* Big Movie.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Big Movie.otf"; sourceTree = "<group>"; };
 		F26F10FA2AE1CA290068B998 /* Hedgehog.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hedgehog.otf; sourceTree = "<group>"; };
+		F270D9EC2B58542500BF8BEE /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		F270D9F02B5864C000BF8BEE /* ClockTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTry.swift; sourceTree = "<group>"; };
+		F270D9F12B5864C000BF8BEE /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		F281910E2B2CCE0D00EBAE38 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		F28191102B2CCF0500EBAE38 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		F284335C2B55DF160072EBE6 /* ChangeUserData-option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangeUserData-option.swift"; sourceTree = "<group>"; };
@@ -348,6 +354,9 @@
 				F28191102B2CCF0500EBAE38 /* NavigationBar.swift */,
 				F2D8FAF32AE04F3C006997F3 /* Foreground.swift */,
 				F281910E2B2CCE0D00EBAE38 /* SideMenu.swift */,
+				F270D9EC2B58542500BF8BEE /* ToDoList.swift */,
+				F270D9F12B5864C000BF8BEE /* Calendar.swift */,
+				F270D9F02B5864C000BF8BEE /* ClockTry.swift */,
 				F2D8FAE82AE04F05006997F3 /* Assets.xcassets */,
 				F26F10F42AE1BAB90068B998 /* Info.plist */,
 				F2D8FAEA2AE04F05006997F3 /* Preview Content */,
@@ -463,9 +472,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F270D9F22B5864C000BF8BEE /* ClockTry.swift in Sources */,
 				F2BD09A22AE3276F0047FB67 /* Study.swift in Sources */,
 				F2BA0ABB2B2896AB00631DB9 /* PostRequest.swift in Sources */,
 				F2BE50C72B55EFEC00EBE14B /* ChangeName.swift in Sources */,
+				F270D9ED2B58542500BF8BEE /* ToDoList.swift in Sources */,
 				F2A53EC82B2B4C6600AE0C27 /* Korisnik.swift in Sources */,
 				F281910F2B2CCE0D00EBAE38 /* SideMenu.swift in Sources */,
 				F2D8FAE52AE04F03006997F3 /* BeBetterApp.swift in Sources */,
@@ -480,6 +491,7 @@
 				F2BE50CB2B55FA4000EBE14B /* ChangeUsername.swift in Sources */,
 				F2BD09A82AE32A340047FB67 /* Background2.swift in Sources */,
 				F284335D2B55DF160072EBE6 /* ChangeUserData-option.swift in Sources */,
+				F270D9F32B5864C000BF8BEE /* Calendar.swift in Sources */,
 				F2BD09A62AE327900047FB67 /* Workout.swift in Sources */,
 				F2D8FAF72AE05069006997F3 /* Register_screen.swift in Sources */,
 				F2D8FAF92AE05586006997F3 /* MainView.swift in Sources */,

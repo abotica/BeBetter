@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2269FA72B59C18C008C20B6 /* AllToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2269FA62B59C18C008C20B6 /* AllToolsView.swift */; };
 		F23EFF902B2A5C9400C2FDD5 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EFF8F2B2A5C9400C2FDD5 /* Icons.swift */; };
 		F26F10F32AE1B3CB0068B998 /* HandWritingDemoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F22AE1B3CB0068B998 /* HandWritingDemoRegular.ttf */; };
 		F26F10F62AE1C9420068B998 /* Mardi Gras.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F52AE1C9420068B998 /* Mardi Gras.otf */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2269FA62B59C18C008C20B6 /* AllToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllToolsView.swift; sourceTree = "<group>"; };
 		F23BD0572B1BAB080029B4FC /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib; sourceTree = "<group>"; };
 		F23BD0592B1BAB940029B4FC /* libecpg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libecpg.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libecpg.a; sourceTree = "<group>"; };
 		F23BD05A2B1BAB940029B4FC /* libpgtypes.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgtypes.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpgtypes.a; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				F270D9EC2B58542500BF8BEE /* ToDoList.swift */,
 				F270D9F12B5864C000BF8BEE /* Calendar.swift */,
 				F270D9F02B5864C000BF8BEE /* ClockTry.swift */,
+				F2269FA62B59C18C008C20B6 /* AllToolsView.swift */,
 				F2D8FAE82AE04F05006997F3 /* Assets.xcassets */,
 				F26F10F42AE1BAB90068B998 /* Info.plist */,
 				F2D8FAEA2AE04F05006997F3 /* Preview Content */,
@@ -494,6 +497,7 @@
 				F270D9F32B5864C000BF8BEE /* Calendar.swift in Sources */,
 				F2BD09A62AE327900047FB67 /* Workout.swift in Sources */,
 				F2D8FAF72AE05069006997F3 /* Register_screen.swift in Sources */,
+				F2269FA72B59C18C008C20B6 /* AllToolsView.swift in Sources */,
 				F2D8FAF92AE05586006997F3 /* MainView.swift in Sources */,
 				F2D8FAF42AE04F3C006997F3 /* Background.swift in Sources */,
 			);

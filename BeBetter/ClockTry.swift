@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-struct contentView: View {
+struct clockView: View {
     @State private var selectedSegment = 0
     @State private var currentTime = Date()
     @State private var stopwatchTime = 0.0
@@ -9,9 +9,33 @@ struct contentView: View {
     @State private var isRunning = false
     @State private var timer: Timer?
     @State private var customCountdownTime : Double = 0.0
+    @State var Screen_Width = UIScreen.main.bounds.width
+    @State var Screen_Height = UIScreen.main.bounds.height
+    @Binding var goBack: Bool
 
     var body: some View {
         VStack {
+            
+            Circle()
+                .opacity(0)
+                .overlay(){
+                    Button(action: {
+                        
+                        goBack.toggle()
+                    
+                        }, label: {
+                    
+                            Image(systemName: "arrow.left")
+    //                                .shadow( radius: 1, x: 1, y: 0.5)
+                                    .foregroundStyle(.accentColorInvert)
+                                    .fontWeight(.black)
+                                   
+                                        })
+                    
+                                    
+                }
+                .frame(width: Screen_Width*0.1, height: Screen_Height*0.03)
+                .offset(x: -Screen_Width*0.4, y: Screen_Height*0.001)
             Picker(selection: $selectedSegment, label: Text("")) {
                 Text("Clock").tag(0)
                 Text("Stopwatch").tag(1)
@@ -280,6 +304,6 @@ struct countdownTimerView: View {
 
 struct contentView_Previews: PreviewProvider {
     static var previews: some View {
-        contentView()
+        clockView(goBack: .constant(false))
     }
 }

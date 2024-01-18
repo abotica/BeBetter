@@ -32,13 +32,17 @@ class TaskViewModel: ObservableObject {
     }
 }
 
-struct ContentView: View {
+struct todoView: View {
     @StateObject private var taskViewModel = TaskViewModel()
     @State private var newTaskTitle = ""
+    @Binding var goBack: Bool
+    @State var Screen_Width = UIScreen.main.bounds.width
+    @State var Screen_Height = UIScreen.main.bounds.height
 
     var body: some View {
         NavigationView {
             VStack {
+                
                 List {
                     ForEach(taskViewModel.tasks) { task in
                         TaskRow(task: task, toggleCompletion: {
@@ -75,6 +79,29 @@ struct ContentView: View {
                 .padding()
             }
             .navigationTitle("To-Do List")
+           
+        }
+        .overlay(alignment: .top){
+            Circle()
+                .opacity(0)
+                .overlay(){
+                    Button(action: {
+                        
+                        goBack.toggle()
+                    
+                        }, label: {
+                    
+                            Image(systemName: "arrow.left")
+    //                                .shadow( radius: 1, x: 1, y: 0.5)
+                                    .foregroundStyle(.accentColorInvert)
+                                    .fontWeight(.black)
+                                   
+                                        })
+                    
+                                    
+                }
+                .frame(width: Screen_Width*0.1, height: Screen_Height*0.03)
+                .offset(x: -Screen_Width*0.4, y: Screen_Height*0.001)
         }
     }
 }
@@ -99,7 +126,7 @@ struct TaskRow: View {
 
 struct TodoApp_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        todoView(goBack: .constant(false))
     }
 }
 

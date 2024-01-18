@@ -28,10 +28,17 @@ struct Icons: View {
     @State var shadowX: CGFloat = 3
     @State var shadowY: CGFloat = 6
     @State var shadowRadius: CGFloat = 0
+    @Binding var showMainView: Bool
+    @State var showStudyView: Bool = false
+    @State var showWorkView: Bool = false
+    @State var showWorkoutView: Bool = false
     
     var body: some View {
         
         Button(action: {
+            
+            showStudyView.toggle()
+            
             
             
             
@@ -51,10 +58,14 @@ struct Icons: View {
             
             
             })
+        .fullScreenCover(isPresented: $showStudyView, content: {
+            AllToolsView(goBack: $showStudyView)
+        })
         
         Button(action: {
             
-            
+            showWorkView.toggle()
+          
             
         }, label: {
            
@@ -71,8 +82,13 @@ struct Icons: View {
             
             
             })
+        .fullScreenCover(isPresented: $showWorkView, content: {
+            AllToolsView(goBack: $showWorkView)
+        })
         
         Button(action: {
+            
+            showWorkoutView.toggle()
             
             
             
@@ -93,6 +109,9 @@ struct Icons: View {
             
             
             })
+        .fullScreenCover(isPresented: $showWorkoutView, content: {
+            AllToolsView(goBack: $showWorkoutView)
+        })
         
         
         
@@ -104,7 +123,7 @@ struct Icons: View {
 
 
 #Preview {
-    Icons()
+    Icons(showMainView: .constant(true))
 }
 
 

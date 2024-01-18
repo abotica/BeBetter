@@ -64,7 +64,7 @@ struct MainView: View {
                     ScrollView(.vertical, showsIndicators: false){
                         
                         VStack(spacing: 20) {
-                            Icons()
+                            Icons(showMainView: $showMainView)
                         }
                         .frame(width: 300)
                         

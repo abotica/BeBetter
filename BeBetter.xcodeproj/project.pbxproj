@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B50BB832B5D6E43005D7454 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50BB822B5D6E43005D7454 /* OffsetKey.swift */; };
+		2B50BB852B5D78D8005D7454 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50BB842B5D78D8005D7454 /* TaskRowView.swift */; };
+		2B632A852B573AAF00348CA6 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B632A842B573AAF00348CA6 /* Calendar.swift */; };
+		2B84A5402B5D85E200FB0219 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B84A53F2B5D85E200FB0219 /* NewTaskView.swift */; };
+		2B84A5422B5D8E5900FB0219 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B84A5412B5D8E5900FB0219 /* TasksView.swift */; };
+		2BC9DF302B5D564B00B9446B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9DF2F2B5D564B00B9446B /* Task.swift */; };
+		2BC9DF332B5D568900B9446B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9DF322B5D568900B9446B /* View+Extensions.swift */; };
+		2BC9DF352B5D56A800B9446B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9DF342B5D56A800B9446B /* Date+Extensions.swift */; };
+		2BC9DF3A2B5D575800B9446B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9DF392B5D575800B9446B /* Home.swift */; };
+		2BC9DF3C2B5D579900B9446B /* Contentview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9DF3B2B5D579900B9446B /* Contentview.swift */; };
+		2BEA7B212B583ED50013C43E /* ClockTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEA7B202B583ED50013C43E /* ClockTry.swift */; };
+		2BEA7B252B5847D00013C43E /* ClockStopwatchCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEA7B242B5847D00013C43E /* ClockStopwatchCountdownView.swift */; };
 		F23EFF902B2A5C9400C2FDD5 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EFF8F2B2A5C9400C2FDD5 /* Icons.swift */; };
 		F26F10F32AE1B3CB0068B998 /* HandWritingDemoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F22AE1B3CB0068B998 /* HandWritingDemoRegular.ttf */; };
 		F26F10F62AE1C9420068B998 /* Mardi Gras.otf in Resources */ = {isa = PBXBuildFile; fileRef = F26F10F52AE1C9420068B998 /* Mardi Gras.otf */; };
@@ -44,6 +56,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B50BB822B5D6E43005D7454 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
+		2B50BB842B5D78D8005D7454 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		2B632A842B573AAF00348CA6 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		2B84A53F2B5D85E200FB0219 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		2B84A5412B5D8E5900FB0219 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		2BC9DF2F2B5D564B00B9446B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2BC9DF322B5D568900B9446B /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		2BC9DF342B5D56A800B9446B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		2BC9DF392B5D575800B9446B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		2BC9DF3B2B5D579900B9446B /* Contentview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contentview.swift; sourceTree = "<group>"; };
+		2BEA7B202B583ED50013C43E /* ClockTry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTry.swift; sourceTree = "<group>"; };
+		2BEA7B242B5847D00013C43E /* ClockStopwatchCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockStopwatchCountdownView.swift; sourceTree = "<group>"; };
 		F23BD0572B1BAB080029B4FC /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib; sourceTree = "<group>"; };
 		F23BD0592B1BAB940029B4FC /* libecpg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libecpg.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libecpg.a; sourceTree = "<group>"; };
 		F23BD05A2B1BAB940029B4FC /* libpgtypes.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpgtypes.a; path = ../../../../../opt/homebrew/Cellar/libpq/16.1/lib/libpgtypes.a; sourceTree = "<group>"; };
@@ -167,6 +191,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BC9DF2E2B5D563400B9446B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BC9DF2F2B5D564B00B9446B /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BC9DF312B5D566F00B9446B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2BC9DF322B5D568900B9446B /* View+Extensions.swift */,
+				2BC9DF342B5D56A800B9446B /* Date+Extensions.swift */,
+				2B50BB822B5D6E43005D7454 /* OffsetKey.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2BC9DF362B5D56FB00B9446B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BC9DF392B5D575800B9446B /* Home.swift */,
+				2B50BB842B5D78D8005D7454 /* TaskRowView.swift */,
+				2B84A53F2B5D85E200FB0219 /* NewTaskView.swift */,
+				2B84A5412B5D8E5900FB0219 /* TasksView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F23BD0562B1BAB080029B4FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,11 +385,15 @@
 		F2D8FAE32AE04F03006997F3 /* BeBetter */ = {
 			isa = PBXGroup;
 			children = (
+				2BC9DF362B5D56FB00B9446B /* Views */,
+				2BC9DF312B5D566F00B9446B /* Helpers */,
+				2BC9DF2E2B5D563400B9446B /* Model */,
 				F2A53EC62B2B4C5900AE0C27 /* Tablice */,
 				F2BA0AB92B28968700631DB9 /* URL-requests */,
 				F2BD09A02AE327600047FB67 /* Categories */,
 				F2D8FAFA2AE05B7E006997F3 /* Fonts */,
 				F2D8FAE42AE04F03006997F3 /* BeBetterApp.swift */,
+				2BC9DF3B2B5D579900B9446B /* Contentview.swift */,
 				F23EFF8F2B2A5C9400C2FDD5 /* Icons.swift */,
 				F2D8FAF82AE05586006997F3 /* MainView.swift */,
 				F2D8FB012AE06A23006997F3 /* Login.swift */,
@@ -347,7 +404,10 @@
 				F2BD09A72AE32A340047FB67 /* Background2.swift */,
 				F28191102B2CCF0500EBAE38 /* NavigationBar.swift */,
 				F2D8FAF32AE04F3C006997F3 /* Foreground.swift */,
+				2B632A842B573AAF00348CA6 /* Calendar.swift */,
 				F281910E2B2CCE0D00EBAE38 /* SideMenu.swift */,
+				2BEA7B202B583ED50013C43E /* ClockTry.swift */,
+				2BEA7B242B5847D00013C43E /* ClockStopwatchCountdownView.swift */,
 				F2D8FAE82AE04F05006997F3 /* Assets.xcassets */,
 				F26F10F42AE1BAB90068B998 /* Info.plist */,
 				F2D8FAEA2AE04F05006997F3 /* Preview Content */,
@@ -467,13 +527,20 @@
 				F2BA0ABB2B2896AB00631DB9 /* PostRequest.swift in Sources */,
 				F2BE50C72B55EFEC00EBE14B /* ChangeName.swift in Sources */,
 				F2A53EC82B2B4C6600AE0C27 /* Korisnik.swift in Sources */,
+				2B84A5402B5D85E200FB0219 /* NewTaskView.swift in Sources */,
 				F281910F2B2CCE0D00EBAE38 /* SideMenu.swift in Sources */,
 				F2D8FAE52AE04F03006997F3 /* BeBetterApp.swift in Sources */,
+				2B50BB832B5D6E43005D7454 /* OffsetKey.swift in Sources */,
+				2BC9DF3A2B5D575800B9446B /* Home.swift in Sources */,
 				F28191112B2CCF0500EBAE38 /* NavigationBar.swift in Sources */,
 				F2BE50CD2B55FC6B00EBE14B /* ChangeSurname.swift in Sources */,
 				F2BD09A42AE327820047FB67 /* Work.swift in Sources */,
 				F2BE50C92B55F04200EBE14B /* ChangePassword.swift in Sources */,
+				2B50BB852B5D78D8005D7454 /* TaskRowView.swift in Sources */,
 				F2D8FB022AE06A23006997F3 /* Login.swift in Sources */,
+				2BC9DF352B5D56A800B9446B /* Date+Extensions.swift in Sources */,
+				2B632A852B573AAF00348CA6 /* Calendar.swift in Sources */,
+				2BC9DF302B5D564B00B9446B /* Task.swift in Sources */,
 				F2D8FAF52AE04F3C006997F3 /* Foreground.swift in Sources */,
 				F2C1AD7F2B2E45280056F80E /* SettingsView.swift in Sources */,
 				F23EFF902B2A5C9400C2FDD5 /* Icons.swift in Sources */,
@@ -481,7 +548,12 @@
 				F2BD09A82AE32A340047FB67 /* Background2.swift in Sources */,
 				F284335D2B55DF160072EBE6 /* ChangeUserData-option.swift in Sources */,
 				F2BD09A62AE327900047FB67 /* Workout.swift in Sources */,
+				2B84A5422B5D8E5900FB0219 /* TasksView.swift in Sources */,
+				2BEA7B252B5847D00013C43E /* ClockStopwatchCountdownView.swift in Sources */,
+				2BEA7B212B583ED50013C43E /* ClockTry.swift in Sources */,
+				2BC9DF332B5D568900B9446B /* View+Extensions.swift in Sources */,
 				F2D8FAF72AE05069006997F3 /* Register_screen.swift in Sources */,
+				2BC9DF3C2B5D579900B9446B /* Contentview.swift in Sources */,
 				F2D8FAF92AE05586006997F3 /* MainView.swift in Sources */,
 				F2D8FAF42AE04F3C006997F3 /* Background.swift in Sources */,
 			);

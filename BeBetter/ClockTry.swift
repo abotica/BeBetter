@@ -35,7 +35,8 @@ struct clockView: View {
                                     
                 }
                 .frame(width: Screen_Width*0.1, height: Screen_Height*0.03)
-                .offset(x: -Screen_Width*0.4, y: Screen_Height*0.001)
+                .offset(x: -Screen_Width*0.4, y: -Screen_Height*0.02)
+            
             Picker(selection: $selectedSegment, label: Text("")) {
                 Text("Clock").tag(0)
                 Text("Stopwatch").tag(1)

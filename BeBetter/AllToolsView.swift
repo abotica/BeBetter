@@ -11,13 +11,15 @@ struct AllToolsView: View {
     
     @State var initialSize: CGFloat = 0
     @State var finalSize: CGFloat = 110
-    @State var isActivated = false
+    @State var isActivatedToDo = false
+    @State var isActivatedClock = false
+    @State var isActivatedDate = false
     @State var Screen_Width = UIScreen.main.bounds.width
     @State var Screen_Height = UIScreen.main.bounds.height
     @State var showClock = false
     @State var showCalendar = false
     @State var showList = false
-//    @State private var currentTime = Date()
+    //    @State private var currentTime = Date()
     @Binding var goBack: Bool
     
     var body: some View {
@@ -34,40 +36,40 @@ struct AllToolsView: View {
                         Button(action: {
                             
                             goBack.toggle()
+                            
+                        }, label: {
+                            
+                            Image(systemName: "arrow.left")
+                            //                                .shadow( radius: 1, x: 1, y: 0.5)
+                                .foregroundStyle(.accentColorInvert)
+                                .fontWeight(.black)
+                            
+                        })
                         
-                            }, label: {
                         
-                                Image(systemName: "arrow.left")
-        //                                .shadow( radius: 1, x: 1, y: 0.5)
-                                        .foregroundStyle(.accentColorInvert)
-                                        .fontWeight(.black)
-                                       
-                                            })
-                        
-                                        
                     }
                     .frame(width: Screen_Width*0.1, height: Screen_Height*0.03)
                     .offset(x: -Screen_Width*0.4, y: Screen_Height*0.001)
                 Spacer()
                 
-                    
+                
                 Button(action: {
                     
-                        showClock.toggle()
+                    showClock.toggle()
                     
                     
                 }, label: {
                     
                     Circle()
                         .foregroundStyle(.accentColorInvert)
-                        .frame(width: isActivated ? finalSize : initialSize)
+                        .frame(width: isActivatedClock ? finalSize : initialSize)
                         .overlay(){
                             Image(systemName: "clock").resizable().frame(width: finalSize-20, height: finalSize - 20)
                         }
-                        
+                    
                 })
                 .fullScreenCover(isPresented: $showClock, content: {
-                   clockView(goBack: $showClock)
+                    clockView(goBack: $showClock)
                 })
                 
                 
@@ -80,17 +82,17 @@ struct AllToolsView: View {
                         
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundStyle(.accentColorInvert)
-                            .frame(width: isActivated ? finalSize : initialSize, height: isActivated ? finalSize : initialSize)
+                            .frame(width: isActivatedToDo ? finalSize : initialSize, height: isActivatedToDo ? finalSize : initialSize)
                             .overlay(){
                                 Image(systemName: "list.star").resizable().frame(width: finalSize-20, height: finalSize - 20)
                             }
-                            
+                        
                     })
                     .fullScreenCover(isPresented: $showList, content: {
-                       todoView(goBack: $showList)
+                        todoView(goBack: $showList)
                     })
                     .padding(.leading)
-                        
+                    
                     Spacer()
                     Button(action: {
                         
@@ -101,18 +103,18 @@ struct AllToolsView: View {
                         
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundStyle(.accentColorInvert)
-                            .frame(width: isActivated ? finalSize : initialSize, height: isActivated ? finalSize : initialSize)
+                            .frame(width: isActivatedDate ? finalSize : initialSize, height: isActivatedDate ? finalSize : initialSize)
                             .overlay(){
                                 Image(systemName: "calendar").resizable().frame(width: finalSize-20, height: finalSize - 20)
                             }
-                            
-                })
+                        
+                    })
                     .fullScreenCover(isPresented: $showCalendar, content: {
-                       CalendarView(goBack: $showCalendar)
+                        ContentView(goBack: $showCalendar)
                     }).padding(.trailing)
                 }
                 
-               Spacer()
+                Spacer()
                 
                 
                 
@@ -122,16 +124,28 @@ struct AllToolsView: View {
             
             
         }
-            .onAppear(){
+        .onAppear(){
             Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false){_ in
                 withAnimation(.bouncy(extraBounce: 0.3)){
-                    isActivated.toggle()
+                    isActivatedClock.toggle()
                 }
+                Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false){_ in
+                    withAnimation(.bouncy(extraBounce: 0.3)){
+                        
+                        isActivatedDate.toggle()
+                        
+                    }
+                    Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false){_ in
+                        withAnimation(.bouncy(extraBounce: 0.3)){
+                            
+                            isActivatedToDo.toggle()
+                            
+                        }
+                    }
+                }
+                
             }
-        }
-        
-    }
-}
+        }}}
 
 #Preview {
     AllToolsView(goBack: .constant(false))

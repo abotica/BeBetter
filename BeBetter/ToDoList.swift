@@ -7,27 +7,27 @@
 
 import SwiftUI
 
-struct Task: Identifiable {
+struct TaskToDo: Identifiable {
     var id = UUID()
     var title: String
     var isCompleted = false
 }
 
 class TaskViewModel: ObservableObject {
-    @Published var tasks: [Task] = []
+    @Published var tasks: [TaskToDo] = []
 
     func addTask(title: String) {
-        let newTask = Task(title: title)
+        let newTask = TaskToDo(title: title)
         tasks.append(newTask)
     }
 
-    func toggleTaskCompletion(task: Task) {
+    func toggleTaskCompletion(task: TaskToDo) {
         if let index = tasks.firstIndex(where: { $0.id == task.id }) {
             tasks[index].isCompleted.toggle()
         }
     }
 
-    func deleteTask(task: Task) {
+    func deleteTask(task: TaskToDo) {
         tasks.removeAll(where: { $0.id == task.id })
     }
 }
@@ -107,7 +107,7 @@ struct todoView: View {
 }
 
 struct TaskRow: View {
-    var task: Task
+    var task: TaskToDo
     var toggleCompletion: () -> Void
 
     var body: some View {
